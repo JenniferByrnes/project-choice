@@ -1,4 +1,5 @@
 # Project Choice
+An in-progress app begun as a final class project for the University of Richmond Full Stack Web Development Bootcamp class graduating on November 2, 2022.
 
 ![License](https://img.shields.io/badge/License-MIT-lightblue.svg)
 
@@ -82,4 +83,4 @@ Check out the creators's Github links here:
 [Github Jennifer Byrnes](https://github.com/JenniferByrnes)\
 [Github Jame Fraser](https://github.com/James-Fraser1)\
 [Github Cortland Finch](https://github.com/cortlandfinch)\
-[Github Christian Rockwook](https://github.com/rockwoodc)\
+[Github Christian Rockwook](https://github.com/rockwoodc)
