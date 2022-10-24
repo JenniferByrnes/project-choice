@@ -81,6 +81,6 @@ Check out the creators's Github links here:
 
 [Github Amanda Phillips](https://github.com/babaphillips)\
 [Github Jennifer Byrnes](https://github.com/JenniferByrnes)\
-[Github Jame Fraser](https://github.com/James-Fraser1)\
+[Github James Fraser](https://github.com/James-Fraser1)\
 [Github Cortland Finch](https://github.com/cortlandfinch)\
-[Github Christian Rockwook](https://github.com/rockwoodc)
+[Github Christian Rockwood](https://github.com/rockwoodc)
