@@ -6,7 +6,7 @@ const productSchema = new Schema({
     type: String,
   },
   productPrice: {
-    type: Integral,
+    type: String,
   },
   size: {
     type: String,

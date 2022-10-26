@@ -12,7 +12,7 @@ const typeDefs = gql`
 
   type Product {
     _id: ID
-    productPrice: Integral
+    productPrice: String
     size: String
     colors: [String]
   }
@@ -38,7 +38,7 @@ const typeDefs = gql`
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
-    saveProduct(input: savedProducts!): User
+
     removeProduct(_id: ID!): User
   }
 `;
