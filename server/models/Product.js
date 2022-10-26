@@ -10,7 +10,6 @@ const productSchema = new Schema({
   },
   size: {
     type: String,
-    default: "Large",
   },
   colors: [],
 });
