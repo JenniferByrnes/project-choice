@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "google-map-react": "^2.2.0",
-    "react-router-dom": "^6.4.2"
+    "react-router-dom": "^6.4.2",
+    "stripe": "^10.15.0"
   }
 }
