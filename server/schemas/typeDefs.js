@@ -21,8 +21,6 @@ const typeDefs = gql`
     image: String
     price: Float
     category: Category
-    size: [String]
-    colors: [String]
   }
 
   type Auth {
