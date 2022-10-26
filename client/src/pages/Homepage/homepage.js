@@ -1,5 +1,5 @@
 import React from "react";
-import mainLogo from "../../assets/mainLogo";
+import mainLogo from "../../assets/mainLogo/main-logo.png";
 
 function Homepage() {
   return (

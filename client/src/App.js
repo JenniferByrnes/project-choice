@@ -1,18 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-import Homepage from './pages/Homepage/homepage';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Homepage from "./pages/Homepage/homepage";
+import Shop from "./pages/Shop/shop";
 
 function App() {
   return (
-    <div className="container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10">
-    <p className="text-3xl text-gray-700 font-bold mb-5">
-      Welcome!
-    </p>
-    <p className="text-gray-500 text-lg">
-      React and Tailwind CSS in action
-    </p>
-    <Homepage />
-  </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about" element={<Homepage />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/contact" element={<Homepage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
