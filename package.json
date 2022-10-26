@@ -24,6 +24,9 @@
     "concurrently": "^7.5.0"
   },
   "dependencies": {
-    "react-router-dom": "^6.4.2"
+    "@react-google-maps/api": "^2.13.1",
+    "google-map-react": "^2.2.0",
+    "react-router-dom": "^6.4.2",
+    "stripe": "^10.15.0"
   }
 }
