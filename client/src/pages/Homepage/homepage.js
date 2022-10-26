@@ -148,7 +148,7 @@ function Homepage() {
           </div>
         </div>
       </div>
-     
+     </div>
     </section>
     
   )
