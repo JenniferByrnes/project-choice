@@ -25,7 +25,7 @@ function Homepage() {
         <div className="w-full h-screenflex justify-center items-center p-4">
           <div className="flex flex-col justify-center items-center">
             <form action="#" method="POST">
-              <div className="overflow-hidden border-8 sm:rounded-md">
+              <div className="overflow-hidden border-8 border-double sm:rounded-md">
                 <div className="bg-white px-4 py-5 sm:p-6">
                   <div className="grid grid-cols-6 gap-6">
                     <div className="col-span-6 sm:col-span-4">
