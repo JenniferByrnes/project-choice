@@ -1,6 +1,24 @@
-import "./map.css";
+import { GoogleMap, LoadScript } from "@react-google-maps/api";
 
-function Map() {
+const containerStyle = {
+  width: "400px",
+  height: "400px",
+};
 
-  return ()
+const center = {
+  lat: -3.745,
+  lng: -38.523,
+};
+
+function mapRender() {
+  return (
+    <LoadScript googleMapsApiKey="AIzaSyAqwqeotjpvq0LArmh-Qr4-yFrKOQyrHGw">
+      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
+        {/* Child components, such as markers, info windows, etc. */}
+        <></>
+      </GoogleMap>
+    </LoadScript>
+  );
 }
+
+export default React.memo(mapRender);
