@@ -1,6 +1,7 @@
 const { Schema, model } = require("mongoose");
 
-const Products = new Schema({
+//create the Products model using the
+const productSchema = new Schema({
   productCategory: {
     type: String,
   },
@@ -14,4 +15,5 @@ const Products = new Schema({
   colors: [],
 });
 
-module.exports = Products;
+// export the Products models
+module.exports = productSchema;
