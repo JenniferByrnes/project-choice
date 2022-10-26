@@ -40,8 +40,15 @@
       "last 1 safari version"
     ]
   },
+
+
   "main": "index.js",
+  "devDependencies": {
+  "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.18",
+    "tailwindcss": "^3.2.1"
+    },
   "author": "",
   "license": "MIT",
-  "description": ""
+
 }
