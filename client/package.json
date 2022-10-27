@@ -40,29 +40,15 @@
       "last 1 safari version"
     ]
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "main": "index.js",
-  "author": "",
-  "license": "MIT",
-  "description": ""
-=======
-=======
 
 
   "main": "index.js",
->>>>>>> eb6bf6f07bad2646955336d19dc7c9c68e42b45f
   "devDependencies": {
   "autoprefixer": "^10.4.12",
     "postcss": "^8.4.18",
     "tailwindcss": "^3.2.1"
-<<<<<<< HEAD
-  }
->>>>>>> feature/homepage
-=======
     },
   "author": "",
-  "license": "MIT",
+  "license": "MIT"
 
->>>>>>> eb6bf6f07bad2646955336d19dc7c9c68e42b45f
 }

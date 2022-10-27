@@ -5,13 +5,11 @@ import Shop from "./pages/Shop/shop";
 import Contact from "./pages/Contact/contact";
 function App() {
   return (
-  
-   <BrowserRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/shop" element={<Shop />} />
-        
       </Routes>
     </BrowserRouter>
   );
