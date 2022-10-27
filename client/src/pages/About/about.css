@@ -1,0 +1,26 @@
+*{
+    background-color: #fffefe;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;
+}
+
+img.my-2.pic{
+    border-radius: 50px;
+    float: left;
+    margin: 25px;
+    /* border:5px solid #277d28;
+    padding: 0;  */
+    position: relative;
+    background: white;
+    color: white;
+    box-shadow: 10px 10px rgba(0,0,0,.15);
+    shape-outside: ellipse(60% 60%);
+    
+  }
+    
+  
+  p {
+    line-height: 35px;
+  }
+
+ 
