@@ -1,23 +1,27 @@
 # Project Choice
-An in-progress app begun as a final class project for the University of Richmond Full Stack Web Development Bootcamp class graduating on November 2, 2022.
+
+An in-progress app begun as a final class project for the University of Richmond Full Stack Web Development Boot Camp class graduating on November 2, 2022.
 
 ![License](https://img.shields.io/badge/License-MIT-lightblue.svg)
 
-## Built with: 
+## Built with:
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 ![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white)
 ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Apollo-GraphQL](https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql)
 
 ## Description:
 
-A personal cookbook, What's Cooking was created as an Interactive Full Stack development project by a team of six developers.
-A fully functional version is available [here](https://rata-whats-cooking.herokuapp.com/)
+With 3 non-personally-identifiable pieces of information (that we don’t collect or store), we’re able to give people seeking abortions the information most relevant to their individual circumstances. Our goal is to make it as easy as possible for people to find the information and resources that apply to them, without having to sift through a lot of noise or, worse, misinformation and stigma from anti-abortion organizations.
+
+A fully functional version is available [here]()
 
 ## Contents
 
@@ -33,29 +37,24 @@ A fully functional version is available [here](https://rata-whats-cooking.heroku
 
 1. Clone the repo
    ```sh
-   git clone git@github.com:JenniferByrnes/whats-cooking.git
+   git clone git@github.com:JenniferByrnes/project-choice.git
    ```
 2. Install all NPM packages
    ```sh
-   npm install express--session express-handlebars connect-session-sequelize handlebars-form-helpers
+   npm install
    ```
-3. Initiate application
+3. Initiate application in the root of the application
    ```sh
-   node server
+   npm run develop
    ```
 
 ## Usage
 
-Cooks can create, read, update, and delete their own recipes and use recipes from the initial database.  Cooks can also leave (and edit or delete) notes attached to any recipe.
+The usage of our application is to provide a simple, up-to-date, and localized source of information for people seeking abortions.
 
 ## Visuals
 
 <img src="./images/readme1.png">
-<img src="./images/readme2.png">
-<img src="./images/dashboard-view.png">
-<img src="./images/single-recipe.png">
-<img src="./images/readme4.png">
-<img src="./images/edit-recipe.png">
 
 ## License
 
