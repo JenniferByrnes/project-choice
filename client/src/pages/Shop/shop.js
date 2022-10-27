@@ -25,8 +25,8 @@ function Shop() {
             <p className='my-4'>My Choice Mug</p>
           </div>
           <div className='w-60 pt-6 shadow-md shadow-[#f8f9fa] hover:shadow-lg hover:shadow-[#9381ff] hover:bg-[#f8f9fa] hover:text-[#2b2b2b] hover:scale-110 duration-300'>
-            <img className='w-20 mx-auto'  alt='My Body T logo' />
-            <p className='my-4'>My Body T</p>
+            <img className='w-20 mx-auto'  alt='My Body T White logo' />
+            <p className='my-4'>My Body T White</p>
           </div>
           <div className='w-60 pt-6 shadow-md shadow-[#f8f9fa] hover:shadow-lg hover:shadow-[#9381ff] hover:bg-[#f8f9fa] hover:text-[#2b2b2b] hover:scale-110 duration-300'>
             <img className='w-20 mx-auto'  alt='My Body Hoodie logo' />
@@ -35,6 +35,18 @@ function Shop() {
           <div className='w-60 pt-6 shadow-md shadow-[#f8f9fa] hover:shadow-lg hover:shadow-[#9381ff] hover:bg-[#f8f9fa] hover:text-[#2b2b2b] hover:scale-110 duration-300'>
             <img className='w-20 mx-auto hover:invert'  alt='Pro Choice Mug logo' />
             <p className='my-4'>Pro Choice Mug</p>
+          </div>
+          <div className='w-60 pt-6 shadow-md shadow-[#f8f9fa] hover:shadow-lg hover:shadow-[#9381ff] hover:bg-[#f8f9fa] hover:text-[#2b2b2b] hover:scale-110 duration-300'>
+            <img className='w-20 mx-auto'  alt='Pro Choice Water Bottle logo' />
+            <p className='my-4'>Pro Choice Water Bottle</p>
+          </div>
+          <div className='w-60 pt-6 shadow-md shadow-[#f8f9fa] hover:shadow-lg hover:shadow-[#9381ff] hover:bg-[#f8f9fa] hover:text-[#2b2b2b] hover:scale-110 duration-300'>
+            <img className='w-20 mx-auto'  alt='My Body T Pink logo' />
+            <p className='my-4'>My Body T Pink</p>
+          </div>
+          <div className='w-60 pt-6 shadow-md shadow-[#f8f9fa] hover:shadow-lg hover:shadow-[#9381ff] hover:bg-[#f8f9fa] hover:text-[#2b2b2b] hover:scale-110 duration-300'>
+            <img className='w-20 mx-auto hover:invert'  alt='Pro Choice Keychain logo' />
+            <p className='my-4'>Pro Choice Keychain</p>
           </div>
         </div>
       </div>
