@@ -1,0 +1,10 @@
+.nav-link {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+
+.nav-link:hover {
+    color: #dc585d;
+}

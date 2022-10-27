@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import '../Nav/nav.css';
 
-const index = () => {
+const Navbar = () => {
     const [nav, setNav] = useState(false);
     const userClick = () => setNav(!nav);
 
@@ -10,15 +10,16 @@ const index = () => {
         <div className='fixed w-full h-[60px] flex justify-between items-center px-4 bg-[#fffefe] text-black'>
 
             {/* Nav Menu */}
-            <ul className='hidden md:flex nav-bar-menu mx-auto space-x-10'>
+            <ul className='hidden md:flex nav-bar-menu mx-auto space-x-20'>
                 <li className='nav-link'><a href='/'>Home</a></li>
                 <li className='nav-link'><a href='/about'>About</a></li>
                 <li className='nav-link'><a href='/contact'>Contact</a></li>
                 <li className='nav-link'><a href='/shop'>Shop</a></li>
+                <li className='nav-link'><a href='/login'>Login</a></li>
             </ul>
 
             {/* Nav Hamburger Menu */}
-            <div onClick={userClick} className='md:hidden z-10'>
+            <div onClick={userClick} className='md:hidden z-10 justify-items-end'>
                 {!nav ? <FaBars /> : <FaTimes />}
             </div>
 
@@ -28,9 +29,10 @@ const index = () => {
                 <li className='py-6 text-3xl'><a href='/about'>About</a></li>
                 <li className='py-6 text-3xl'><a href='/contact'>Contact</a></li>
                 <li className='py-6 text-3xl'><a href='/shop'>Shop</a></li>
+                <li className='py-6 text-3xl'><a href='/login'>Login</a></li>
             </ul>
         </div>
     )
 }
 
-export default index
+export default Navbar
