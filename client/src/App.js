@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Homepage from "./pages/Homepage/homepage";
@@ -8,7 +7,6 @@ import About from "./pages/About/about";
 import Nav from "./components/Nav/index";
 function App() {
   return (
-
     <BrowserRouter>
       <Nav />
       <Routes>
