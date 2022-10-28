@@ -46,6 +46,8 @@ function Homepage() {
             </div>
           </div>
         </div>
+
+        {/* start form code */}
         <div className="flex flex-col justify-center items-center">
           <form action="#" method="POST">
             <div className="overflow-hidden border-8 border-double sm:rounded-md">
@@ -120,5 +122,17 @@ function Homepage() {
     </motion.div>
   );
 }
+
+let zipCode = document.getElementById("zip-code").value;
+console.log (zipCode);
+
+let age = document.getElementById("age").value;
+console.log (age);
+
+let period = document.querySelector("#period").value;
+console.log (period);
+
+
+
 
 export default Homepage;

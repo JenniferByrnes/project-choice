@@ -5,12 +5,12 @@ import Shop from "./pages/Shop/shop";
 import Contact from "./pages/Contact/contact";
 import About from "./pages/About/about";
 import Nav from "./components/Nav/index";
-import {AnimatePresence} from 'framer-motion';
+
 
 function App() {
   return (
     <BrowserRouter>
-      <AnimatePresence>
+      
       
       <Nav />
     
@@ -20,7 +20,7 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/about" element={<About />} />
       </Routes>
-      </AnimatePresence>
+      
     </BrowserRouter>
   );
 }
