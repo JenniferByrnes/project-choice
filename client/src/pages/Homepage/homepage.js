@@ -1,16 +1,16 @@
 import React from "react";
-import mainLogo from "../../assets/mainLogo/main-logo.png";
+import mainLogo from "../../assets/mainLogo/fullLogo.png";
 import "./homepage.css";
-
+// bg-[#dae8e3]
 function Homepage() {
   return (
-    <section className="homepage w-full p-6 md:h-screen bg-[#dae8e3]">
+    <section className="homepage w-full p-6 md:h-screen">
       <div className="p-0 ">
-        <div className="flex justify-center w-full h-full homepage-logo">
+        <div className="pb-10 pt-20 flex justify-center w-full h-full homepage-logo">
           <img
             className="homepageLogo"
             src={mainLogo}
-            style={{ width: "550px", height: "550px" }}
+            style={{ width: "350px", height: "350px" }}
             alt="cover"
           />
         </div>
@@ -94,9 +94,6 @@ function Homepage() {
             </form>
           </div>
         </div>
-      
-      {/* </div>
-      </div> */}
     </section>
   );
 }

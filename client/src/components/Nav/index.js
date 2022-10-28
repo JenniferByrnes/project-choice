@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import '../Nav/nav.css';
 
 const Navbar = () => {
@@ -20,7 +20,7 @@ const Navbar = () => {
 
             {/* Nav Hamburger Menu */}
             <div onClick={userClick} className='md:hidden z-10 justify-items-end'>
-                {/* {!nav ? <FaBars /> : <FaTimes />} */}
+                {!nav ? <FaBars /> : <FaTimes />}
             </div>
 
             {/* Mobile Nav Menu */}
