@@ -21,4 +21,4 @@ function mapRender() {
   );
 }
 
-export default React.memo(mapRender);
+export default mapRender;
