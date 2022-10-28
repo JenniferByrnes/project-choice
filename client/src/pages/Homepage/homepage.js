@@ -4,8 +4,8 @@ import "./homepage.css";
 
 function Homepage() {
   return (
-    <section className="homepage">
-      <div className="p-0">
+    <section className="homepage w-full p-6 md:h-screen bg-[#dae8e3]">
+      <div className="p-0 ">
         <div className="flex justify-center w-full h-full homepage-logo">
           <img
             className="homepageLogo"
