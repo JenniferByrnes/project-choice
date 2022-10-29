@@ -30,7 +30,7 @@ function Homepage() {
         </div>
       </div>
 
-      <div className="w-full h-screenflex justify-center items-center p-4 flex-row columns-2">
+      <div className="w-full h-screen justify-center items-center p-4 flex-row columns-2">
         <div className="flex flex-col justify-center items-center">
           <div className="overflow-hidden border-8 border-double sm:rounded-md">
             <div className="bg-white px-4 py-5 sm:p-6">
@@ -52,14 +52,16 @@ function Homepage() {
           </div>
         </div>
         <div className="flex flex-col justify-center items-center">
-          <div className="overflow-hidden border-8 border-double sm:rounded-md">
-            <div className="bg-white px-4 py-5 sm:p-6">
+          <div className="overflow-hidden border-8 border-double sm:rounded-md justify-center items-center">
+            <div className="bg-white px-4 py-5 sm:p-6 justify-center items-center">
               <div className="font-extrabold leading-10">
                 To find out more about abortion regulations in your State click
                 below.
               </div>
-              <div>
-                <button>Click</button>
+              <div className="flex flex-col items-center">
+                <a href="/policies">
+                  <button className='mt-10 mb-10 py-1 px-5 shadow-md shadow-[#dae8e3] text-black text-lg border-8 border-double border-[#dae8e3] hover:bg-[#dae8e3] hover:text-black hover:shadow-md hover:shadow-[#e9ecef]'>Policies</button>
+                </a>
               </div>
             </div>
           </div>
