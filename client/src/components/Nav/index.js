@@ -27,12 +27,12 @@ const Navbar = () => {
             </ul>
 
             {/* Nav Hamburger Menu */}
-            <div onClick={userClick} className='md:hidden z-10 justify-items-end'>
+            <div onClick={userClick} className='md:hidden z-10 justify-items-end fill-[#e7e7e7]'>
                 {!nav ? <FaBars /> : <FaTimes />}
             </div>
 
             {/* Mobile Nav Menu */}
-            <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#dae8e3] text-black flex flex-col justify-center items-center'}>
+            <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#e7e7e7] text-black flex flex-col justify-center items-center'}>
                 <li className='nav-link py-6 text-3xl'><a href='/'>Home</a></li>
                 <li className='nav-link py-6 text-3xl'><a href='/about'>About</a></li>
                 <li className='nav-link py-6 text-3xl'><a href='/contact'>Contact</a></li>
