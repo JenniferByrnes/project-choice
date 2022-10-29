@@ -1,9 +1,9 @@
 
 
 import React from "react";
-import ProductList from "../components/ProductList";
-import CategoryMenu from "../components/CategoryMenu";
-import Cart from '../components/Cart';
+import ProductList from "../../components/ProductList";
+import CategoryMenu from "../../components/CategoryMenu";
+import Cart from '../../components/Cart';
 
 // const Home = () => {
 //   const [currentCategory, setCategory] = useState("");
@@ -16,7 +16,7 @@ import Cart from '../components/Cart';
 //   );
 // };
 
-const Home = () => {
+const Shop = () => {
   return (
     <div className="container">
       <CategoryMenu />
@@ -27,4 +27,4 @@ const Home = () => {
 };
 
 
-export default Home;
+export default Shop;

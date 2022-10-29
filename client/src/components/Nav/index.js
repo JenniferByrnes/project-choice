@@ -23,6 +23,7 @@ const Navbar = () => {
                 <li className='nav-link'><a href='/contact'>Contact</a></li>
                 <li className='nav-link'><a href='/shop'>Shop</a></li>
                 <li className='nav-link'><a href='/login'>Login</a></li>
+                <li className='nav-link'><a href='/signup'>Sign Up</a></li>
             </ul>
 
             {/* Nav Hamburger Menu */}
@@ -37,6 +38,7 @@ const Navbar = () => {
                 <li className='py-6 text-3xl'><a href='/contact'>Contact</a></li>
                 <li className='py-6 text-3xl'><a href='/shop'>Shop</a></li>
                 <li className='py-6 text-3xl'><a href='/login'>Login</a></li>
+                <li className='py-6 text-3xl'><a href='/signup'>Sign Up</a></li>
             </ul>
         </motion.div>
     )
