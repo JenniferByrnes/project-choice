@@ -1,24 +1,30 @@
+
+
 import React from "react";
-import mainLogo from "../../assets/mainLogo/main-logo.png";
-import ProductList from "../../components/ProductList";
-import CategoryMenu from "../../components/CategoryMenu";
+import ProductList from "../components/ProductList";
+import CategoryMenu from "../components/CategoryMenu";
+import Cart from '../components/Cart';
 
+// const Home = () => {
+//   const [currentCategory, setCategory] = useState("");
 
-const Shop = () => {
+//   return (
+//     <div className="container">
+//       <CategoryMenu setCategory={setCategory} />
+//       <ProductList currentCategory={currentCategory} />
+//     </div>
+//   );
+// };
+
+const Home = () => {
   return (
     <div className="container">
-      <div>
-        <img
-          src={mainLogo}
-          className="my-2 pic float-left"
-          style={{ width: "20%" }}
-          alt="cover"
-        />
-      </div>
-      {/* <CategoryMenu /> */}
+      <CategoryMenu />
       <ProductList />
+      <Cart />
     </div>
   );
-}
+};
 
-export default Shop;
+
+export default Home;
