@@ -1,10 +1,30 @@
-export default function Shop() {
+
+
+import React from "react";
+import ProductList from "../../components/ProductList";
+import CategoryMenu from "../../components/CategoryMenu";
+import Cart from '../../components/Cart';
+
+// const Home = () => {
+//   const [currentCategory, setCategory] = useState("");
+
+//   return (
+//     <div className="container">
+//       <CategoryMenu setCategory={setCategory} />
+//       <ProductList currentCategory={currentCategory} />
+//     </div>
+//   );
+// };
+
+const Shop = () => {
   return (
-    <div>
-      <h1>this is the shop page</h1>
-      <a href="/">
-        <button type="button">take me home</button>
-      </a>
+    <div className="container">
+      <CategoryMenu />
+      <ProductList />
+      <Cart />
     </div>
   );
-}
+};
+
+
+export default Shop;
