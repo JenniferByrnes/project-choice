@@ -17,6 +17,7 @@ import Detail from './pages/Detail/Detail';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
 import Success from './pages/Success/Success';
+import Footer from './components/Footer';
 
 import { StoreProvider } from './utils/GlobalState';
 import OrderHistory from './pages/OrderHistory/OrderHistory';
@@ -53,23 +54,12 @@ function App() {
               <Route path="/shop" element={<Shop />} />
               <Route path="/about" element={<About />} />
               <Route path="/login" element={<Login />} />
-              <Route
-                path="/signup"
-                element={<Signup />}
-              />
-              <Route
-                path="/orderHistory"
-                element={<OrderHistory />}
-              />
-              <Route
-                path="/products/:id"
-                element={<Detail />}
-              />
-              <Route
-                path="/success"
-                element={<Success />}
-              />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/orderHistory" element={<OrderHistory />} />
+              <Route path="/products/:id" element={<Detail />} />
+              <Route path="/success" element={<Success />} />
             </Routes>
+            <Footer />
           </StoreProvider>
         </div>
       </Router>

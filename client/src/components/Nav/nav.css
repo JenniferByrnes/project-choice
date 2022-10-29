@@ -3,7 +3,7 @@
     display: inline-block;
     position: relative;
     transition: all 0.3s ease 0s;
-    background: #dae8e3
+    background: #e7e7e7
 }
 
 .nav-link:hover {
@@ -11,17 +11,9 @@
 }
 
 .nav-bar-menu {
-    background: #dae8e3
+    background: #e7e7e7
 }
 
 .nav-link a {
-    background: #dae8e3
-}
-
-li {
-    background: #dae8e3
-}
-
-li a {
-   background: #dae8e3
+    background: #e7e7e7
 }
