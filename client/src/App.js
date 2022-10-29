@@ -1,37 +1,37 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
-} from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
 import "./App.css";
 import Homepage from "./pages/Homepage/homepage";
 import Shop from "./pages/Shop/shop";
 import Contact from "./pages/Contact/contact";
 import About from "./pages/About/about";
 import Nav from "./components/Nav/index";
-import Detail from './pages/Detail/Detail';
-import Login from './pages/Login/Login';
-import Signup from './pages/Signup/Signup';
-import Success from './pages/Success/Success';
-import Footer from './components/Footer';
+import Detail from "./pages/Detail/Detail";
+import Login from "./pages/Login/Login";
+import Signup from "./pages/Signup/Signup";
+import Success from "./pages/Success/Success";
+import Footer from "./components/Footer";
 
-import { StoreProvider } from './utils/GlobalState';
-import OrderHistory from './pages/OrderHistory/OrderHistory';
+import { StoreProvider } from "./utils/GlobalState";
+import OrderHistory from "./pages/OrderHistory/OrderHistory";
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: "/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem('id_token');
+  const token = localStorage.getItem("id_token");
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : '',
+      authorization: token ? `Bearer ${token}` : "",
     },
   };
 });

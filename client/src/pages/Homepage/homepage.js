@@ -70,13 +70,4 @@ function Homepage() {
   );
 }
 
-// let zipCode = document.getElementById("zip-code").value;
-// console.log (zipCode);
-
-// let age = document.getElementById("age").value;
-// console.log (age);
-
-// let period = document.querySelector("#period").value;
-// console.log (period);
-
 export default Homepage;
