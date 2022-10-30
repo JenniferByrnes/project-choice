@@ -4,14 +4,7 @@ import { pluralize } from "../../utils/helpers";
 import { useStoreContext } from '../../utils/GlobalState';
 import { idbPromise } from "../../utils/helpers";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
-// import './ProductItem.css';
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-} from "@material-tailwind/react";
+import './ProductItem.css';
 
 function ProductItem(item) {
   const {
@@ -51,30 +44,19 @@ function ProductItem(item) {
   };
 
   return (
-    <Card className="w-96">
-      <CardHeader color="blue" className="relative h-56"></CardHeader>
+    <div className="card container overflow-hidden rounded-lg shadow-lg">
       <Link to={`/products/${_id}`}>
         <img
           alt={name}
-          src={`/images/${image}`} 
-          className="h-full w-full"
-          />
+          src={`/images/${image}`} />
         <p>{name}</p>
       </Link>
-      <CardBody className="text-center">     
-      <Typography variant="h5" className="mb-2">
-      <div>{quantity} {pluralize("item", quantity)} in stock</div>
-      </Typography>
-      <Typography>
+      <div className="container">
+        <div>{quantity} {pluralize("item", quantity)} in stock</div>
         <span>${price}</span>
-        </Typography>
-      </CardBody>
-      <CardFooter>
-      <Typography variant="small">
+      </div>
       <button onClick={addToCart}>Add to cart</button>
-      </Typography>
-      </CardFooter>
-    </Card>
+    </div>
   );
 }
 
