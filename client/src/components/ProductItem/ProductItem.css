@@ -6,7 +6,7 @@
     width: 25%;
     padding: 0 10px;
     text-align: center;
-    
+  
   }
   
   /* On mouse-over, add a deeper shadow */
@@ -17,4 +17,5 @@
   /* Add some padding inside the card container */
   .container {
     padding: 2px 16px;
+    margin: 10px;
   }

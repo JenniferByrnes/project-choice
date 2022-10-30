@@ -44,7 +44,7 @@ function ProductItem(item) {
   };
 
   return (
-    <div className="card container overflow-hidden rounded-lg shadow-lg">
+    <div className="card overflow-hidden rounded-lg shadow-lg">
       <Link to={`/products/${_id}`}>
         <img
           alt={name}
