@@ -1,15 +1,10 @@
-import { motion } from "framer-motion";
 import mainLogo from "../../assets/mainLogo/fullLogo.png";
 import "./homepage.css";
 // bg-[#dae8e3]
 
 function Homepage() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
+    <div
       className="homepage w-full p-6 md:h-screen"
     >
       <div className="p-0 ">
@@ -42,8 +37,7 @@ function Homepage() {
               way is lack of information, and so our project was born.
               <br />
               <br />
-              By filling out this form you will be connected with clinics
-              closest to you, laws in your area, and many other resources to
+              By chosing your state, you will be connected with clinics, laws in your area, and many other resources to
               help keep you safe and healthy.
               <br />
               <br />
@@ -55,12 +49,12 @@ function Homepage() {
           <div className="overflow-hidden border-8 border-double sm:rounded-md justify-center items-center">
             <div className="bg-white px-4 py-5 sm:p-6 justify-center items-center">
               <div className="font-extrabold leading-10">
-                To find out more about abortion regulations in your State select
-                your State below below.
+                To find out more about abortion regulations in your state select
+                your state below below.
               </div>
               <select
                 id="period"
-                className="mt-1 block w-full rounded-md border-4 bg-white py-2 px-3 shadow-sm  sm:text-sm"
+                className="mt-1 block w-full rounded-md border-4 bg-white py-2 px-3 shadow-sm sm:text-sm"
               >
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
@@ -116,8 +110,8 @@ function Homepage() {
               </select>
               <div className="flex flex-col items-center">
                 <a href="/policies">
-                  <button className="mt-10 mb-10 py-1 px-5 shadow-md shadow-[#dae8e3] text-black text-lg border-8 border-double border-[#dae8e3] hover:bg-[#dae8e3] hover:text-black hover:shadow-md hover:shadow-[#e9ecef]">
-                    Policies
+                  <button className="mt-10 mb-10 py-1 px-5 shadow-md shadow-[#dae8e3] text-black text-lg border-8 border-double border-red-200 hover:bg-[#d98a8a] hover:text-black hover:shadow-md hover:shadow-[#e9ecef]">
+                    Search
                   </button>
                 </a>
               </div>
@@ -126,7 +120,7 @@ function Homepage() {
         </div>
       </div>
       {/* start form code */}
-    </motion.div>
+    </div>
   );
 }
 

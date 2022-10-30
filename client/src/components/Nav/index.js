@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { motion } from "framer-motion";
 import "../Nav/nav.css";
 
 const Navbar = () => {
@@ -8,12 +7,7 @@ const Navbar = () => {
   const userClick = () => setNav(!nav);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-      className="fixed w-full h-[60px] flex justify-between items-center px-4 bg-[#e7e7e7] text-black"
+    <div className="fixed w-full h-[60px] flex justify-between items-center px-4 bg-[#e7e7e7] text-black"
     >
       {/* Nav Menu */}
       <ul className="hidden md:flex nav-bar-menu mx-auto space-x-20">
@@ -75,7 +69,7 @@ const Navbar = () => {
           <a href="/signup">Sign Up</a>
         </li>
       </ul>
-    </motion.div>
+    </div>
   );
 };
 
