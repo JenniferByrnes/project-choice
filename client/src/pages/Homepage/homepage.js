@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import mainLogo from "../../assets/mainLogo/fullLogo.png";
+import React, { useState } from "react";
 import "./homepage.css";
 // bg-[#dae8e3]
 
 function Homepage() {
+  const [selectedOption, setSelectedOption] = useState(0);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -59,7 +61,10 @@ function Homepage() {
                 your State below below.
               </div>
               <select
-                id="period"
+                onChange={(event) =>
+                  setSelectedOption(event.target.options.selectedIndex)
+                }
+                id="states"
                 className="mt-1 block w-full rounded-md border-4 bg-white py-2 px-3 shadow-sm  sm:text-sm"
               >
                 <option value="AL">Alabama</option>
