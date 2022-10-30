@@ -65,7 +65,7 @@ function About() {
           <div className="p-4 shadow-lg shadow-[#dae8e3] group container flex justify-center text-center items-center mx-auto border-8 border-double border-[#dae8e3]">
             <div>
               <img
-                className="homepageLogo"
+                className="homepageLogo rounded-md"
                 src={posterTile}
                 style={{ width: "300px", height: "300px" }}
                 alt="cover"
