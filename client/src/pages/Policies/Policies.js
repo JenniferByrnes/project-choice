@@ -62,7 +62,7 @@ function Policies() {
 
         <div className="p-3 shadow-md shadow-[#dc585d] group container flex justify-center text-left items-center mx-auto border-8 border-double border-[#dc585d]">
           <div className="p-3">
-            <div className="pb-3 underline">Clinics</div>
+            <div className="pb-3 text-center underline">Clinics</div>
             <ul className="list-disc">
               <li className="p-2">
                 Planned Parenthood of the Rocky Mountains, Inc. Denver, CO
