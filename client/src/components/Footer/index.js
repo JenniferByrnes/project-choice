@@ -3,7 +3,7 @@ import '../Footer/footer.css'
 
 const Footer = () => {
   return (
-    <footer className="p-4 bg-[#f6f6f6] sm:p-6">
+    <footer className="footer p-4 bg-[#f6f6f6] sm:p-6">
     <div className="bg-[#f6f6f6] md:flex md:justify-between">
         <div className="bg-[#f6f6f6] grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div className='bg-[#f6f6f6]'>
