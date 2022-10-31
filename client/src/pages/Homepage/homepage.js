@@ -1,5 +1,5 @@
 import{useState} from 'react';
-import { motion } from "framer-motion";
+import React from "react";
 import mainLogo from "../../assets/mainLogo/fullLogo.png";
 import "./homepage.css";
 // bg-[#dae8e3]
@@ -11,13 +11,7 @@ function Homepage() {
     setState(e.target.value);
   }
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-      className="homepage w-full p-6 md:h-screen"
-    >
+    <div className="homepage w-full p-6 md:h-screen">
       <div className="p-0 ">
         <div className="pb-10 pt-20 flex justify-center w-full h-full homepage-logo">
           <img
@@ -67,7 +61,6 @@ function Homepage() {
               <select
                 id="period"
                 className="mt-1 block w-full rounded-md border-4 bg-white py-2 px-3 shadow-sm  sm:text-sm"
-                onChange={handleSelect}
               >
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
@@ -122,7 +115,7 @@ function Homepage() {
                 <option value="WY">Wyoming</option>
               </select>
               <div className="flex flex-col items-center">
-                <a href={`/policies/${state}`}>
+                <a href="/policies">
                   <button className="mt-10 mb-10 py-1 px-5 shadow-md shadow-[#dae8e3] text-black text-lg border-8 border-double border-[#dae8e3] hover:bg-[#dae8e3] hover:text-black hover:shadow-md hover:shadow-[#e9ecef]">
                     Policies
                   </button>
@@ -133,7 +126,7 @@ function Homepage() {
         </div>
       </div>
       {/* start form code */}
-    </motion.div>
+    </div>
   );
 }
 

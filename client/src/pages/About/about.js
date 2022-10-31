@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 import posterTile from "../../assets/posterTile/poster.jpeg";
 import Tile from "../../assets/posterTile/unite.png";
 import "./about.css";
@@ -10,9 +8,9 @@ function About() {
       name="about-tiles"
       className="w-full mb-6 p-6 md:h-screen text-[#2b2b2b]"
     >
-      <div className="mt-12 p-6 flex flex-col justify-center w-full h-full">
+      <div className="mt-12 p-6 flex flex-col justify-center w-full">
         <div className="about-heading pb-12 text-center">
-          <h2 className="text-4xl inline border-b-4 border-[#dc585d] py-2">
+          <h2 className="text-4xl inline border-b-4 border-[#dc585d] py-3">
             About Project Choice
           </h2>
         </div>
@@ -27,7 +25,7 @@ function About() {
                 alt="cover"
               />
               <div className="pt-8 text-center "></div>
-           
+            </div>
           </div>
 
           <div className="p-4 shadow-lg shadow-[#dae8e3] group container flex justify-center text-center items-center mx-auto border-8 border-double border-[#dae8e3]">
@@ -68,7 +66,7 @@ function About() {
           </div>
         </div>
       </div>
-   </div>
+    
   );
 }
 
