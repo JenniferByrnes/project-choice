@@ -16,11 +16,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
-    "react-redux": "^7.2.0",
+    "react-redux": "^7.2.9",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.1",
     "react-select-us-states": "^0.1.2",
-    "redux": "^4.0.5"
+    "redux": "^4.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
