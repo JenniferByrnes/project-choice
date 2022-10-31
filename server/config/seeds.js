@@ -39,7 +39,7 @@ db.once('open', async () => {
       category: categories[0]._id,
       description:
         'A cute taupe shirt with our fabulous logo',
-      image: 't-shirt.jpg',
+      image: 't-shirt.png',
       price: 17.99,
       quantity: 20
     },

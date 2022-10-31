@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/project-choice",
+  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/project-choices",
   {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
   }
 );
 

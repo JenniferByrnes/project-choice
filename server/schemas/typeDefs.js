@@ -1,30 +1,19 @@
-// import the gql tagged template function
-const { gql } = require("apollo-server-express");
+const { gql } = require('apollo-server-express');
 
-// create our typeDefs
 const typeDefs = gql`
-  type User {
-    _id: ID
-    email: String
-    orders: [Order]
-  }
-
   type Category {
     _id: ID
     name: String
   }
+
   type Product {
     _id: ID
     name: String
     description: String
     image: String
+    quantity: Int
     price: Float
     category: Category
-  }
-
-  type Auth {
-    token: ID!
-    user: User
   }
 
   type Order {
@@ -33,15 +22,26 @@ const typeDefs = gql`
     products: [Product]
   }
 
+  type User {
+    _id: ID
+    email: String
+    orders: [Order]
+  }
+
   type Checkout {
     session: ID
   }
 
-  type Query {
+  type Auth {
+    token: ID
     user: User
+  }
+
+  type Query {
     categories: [Category]
     products(category: ID, name: String): [Product]
     product(_id: ID!): Product
+    user: User
     order(_id: ID!): Order
     checkout(products: [ID]!): Checkout
   }

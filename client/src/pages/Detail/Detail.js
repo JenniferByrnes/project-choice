@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import { useStoreContext } from "../../utils/GlobalState";
+import { useDispatch, useSelector } from 'react-redux';
 import { idbPromise } from "../../utils/helpers";
 
 import { QUERY_PRODUCTS } from '../../utils/queries';
@@ -15,7 +15,7 @@ import {
 } from '../../utils/actions';
 
 function Detail() {
-  // const { id } = useParams();
+  const { id } = useParams();
   // const [currentProduct, setCurrentProduct] = useState({});
   // const { loading, data } = useQuery(QUERY_PRODUCTS);
   // const products = data?.products || [];
@@ -25,9 +25,9 @@ function Detail() {
   //     setCurrentProduct(products.find((product) => product._id === id));
   //   }
   // }, [products, id]);
-
-  const [state, dispatch] = useStoreContext();
-  const { id } = useParams();
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state);
+ 
 
   const [currentProduct, setCurrentProduct] = useState({})
 
