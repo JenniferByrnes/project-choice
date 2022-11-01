@@ -22,8 +22,7 @@ import Signup from "./pages/Signup/Signup";
 import Success from "./pages/Success/Success";
 import Footer from "./components/Footer";
 import OrderHistory from "./pages/OrderHistory/OrderHistory";
-import { AnimatePresence } from "framer-motion";
-
+import Policies from "./pages/Policies/Policies";
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
@@ -50,7 +49,6 @@ function App() {
         <div>
           <Provider store={store}>
             <Nav />
-            <AnimatePresence>
               <Routes>
                 <Route path="/" element={<Homepage />} />
                 <Route path="/contact" element={<Contact />} />
@@ -61,9 +59,9 @@ function App() {
                 <Route path="/orderHistory" element={<OrderHistory />} />
                 <Route path="/products/:id" element={<Detail />} />
                 <Route path="/success" element={<Success />} />
+                <Route path="/policies/:state" element={<Policies />} />
               </Routes>
               <Footer />
-            </AnimatePresence>
           </Provider>
         </div>
       </Router>
