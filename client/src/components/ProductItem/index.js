@@ -4,6 +4,7 @@ import { pluralize } from '../../utils/helpers';
 import { useDispatch, useSelector } from 'react-redux';
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
 import { idbPromise } from '../../utils/helpers';
+import './ProductItem.css';
 
 function ProductItem(item) {
   const dispatch = useDispatch();
@@ -35,19 +36,27 @@ function ProductItem(item) {
   };
 
   return (
-    <div className="card px-1 py-1">
-      <Link to={`/products/${_id}`}>
-        <img alt={name} src={`/images/${image}`} />
-        <p>{name}</p>
-      </Link>
-      <div>
-        <div>
-          {quantity} {pluralize('item', quantity)} in stock
+
+    <section className="section-card hover14">
+      <div className="card">
+        <div className="img-container">
+          <img src={`/images/${image}`} alt={name}/>
         </div>
-        <span>${price}</span>
-      </div>
-      <button onClick={addToCart}>Add to cart</button>
-    </div>
+        <div className="infos">
+          <h3 className="name">
+            {name}
+          </h3>
+          <h2 className="price">
+          {quantity} {pluralize("item", quantity)} in stock
+          </h2>
+          <h2 className="price">
+            ${price}
+          </h2>
+          <button className="btn btn-buy" onClick={addToCart}>Add to cart</button>
+        </div >
+      </div >
+    </section >
+    
   );
 }
 
