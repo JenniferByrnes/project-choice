@@ -1,6 +1,6 @@
 # Project Choice
 
-An in-progress app begun as a final class project for the University of Richmond Full Stack Web Development Boot Camp class graduating on November 2, 2022.
+Project Choice is a single page React Application that provides current information on Abortion Access by state.  There is a contact form to get more information and an online shop with branded products available for purchase.  All proceeds go the Planned Parenthood.
 
 ![License](https://img.shields.io/badge/License-MIT-lightblue.svg)
 
@@ -50,7 +50,7 @@ A fully functional version is available [here]()
 
 ## Usage
 
-The usage of our application is to provide a simple, up-to-date, and localized source of information for people seeking abortions.
+The usage of our application is to provide a simple, up-to-date, and localized source of information for people seeking abortions and an online store that offers branded products for sale.
 
 ## Visuals
 
