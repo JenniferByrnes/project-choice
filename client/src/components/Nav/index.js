@@ -19,9 +19,6 @@ const Navbar = () => {
           <Link to="/about">About</Link>
         </li>
         <li className="nav-link">
-          <Link to="/policies">Policies</Link>
-        </li>
-        <li className="nav-link">
           <Link to="/contact">Contact</Link>
         </li>
         <li className="nav-link">
@@ -53,9 +50,6 @@ const Navbar = () => {
         </li>
         <li className="nav-link py-6 text-3xl">
           <Link to="/about">About</Link>
-        </li>
-        <li className="nav-link py-6 text-3xl">
-          <Link to="/policies">Policies</Link>
         </li>
         <li className="nav-link py-6 text-3xl">
           <Link to="/contact">Contact</Link>
