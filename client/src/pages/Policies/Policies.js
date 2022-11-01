@@ -22,7 +22,11 @@ function Policies() {
   }, []);
   //   console.log(waiting);
   return (
-    <div className="mt-12 p-6 flex flex-col justify-center w-full h-full">
+    <div
+      className="w-full mb-6 p-6 md:h-screen">
+
+    
+    <div className="mt-4 p-6 flex flex-col justify-center w-full h-full">
       <div className="about-heading pb-12 text-center">
         <h2 className="text-4xl inline border-b-4 border-[#dc585d] py-2">
           Colorado
@@ -30,7 +34,7 @@ function Policies() {
       </div>
 
       <div className="pb-3 grid grid-cols-2 auto-cols-max gap-x-4 gap-y-8">
-        <div className="p-3 shadow-md shadow-[#dc585d] group container justify-center text-center items-center mx-auto border-8 border-double border-[#dc585d]">
+        <div className="p-3 shadow-md shadow-[#fcded3] group container justify-center text-center items-center mx-auto border-8 border-double border-[#fcded3]">
           <div className="p-3 text-center underline ">Restrictions</div>
           <ul className=" p-3 text-left list-disc">
             <li>Colorado law limits public funding for abortion.</li>
@@ -60,7 +64,7 @@ function Policies() {
           </ul>
         </div>
 
-        <div className="p-3 shadow-md shadow-[#dc585d] group container flex justify-center text-left items-center mx-auto border-8 border-double border-[#dc585d]">
+        <div className="p-3 shadow-md shadow-[#fcded3] group container flex justify-center text-left items-center mx-auto border-8 border-double border-[#fcded3]">
           <div className="p-3">
             <div className="pb-3 text-center underline">Clinics</div>
             <ul className="list-disc">
@@ -93,6 +97,7 @@ function Policies() {
         </div>
       </div>
     </div>
+  </div>
   );
 }
 
