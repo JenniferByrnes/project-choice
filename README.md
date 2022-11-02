@@ -54,7 +54,7 @@ The usage of our application is to provide a simple, up-to-date, and localized s
 
 ## Visuals
 
-<img src="./client/src/assets/screenshots/PC-cover.png">
+<img src="./client/src/assets/screenshots/PC-Cover.png">
 <img src="./client/src/assets/screenshots/PC-policy.png">
 <img src="./client/src/assets/screenshots/PC-about.png">
 <img src="./client/src/assets/screenshots/PC-contact.png">
