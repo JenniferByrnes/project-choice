@@ -1,115 +1,114 @@
-const db = require('../config/connection');
-const { User, Product, Category } = require('../models');
+const db = require("../config/connection");
+const { User, Product, Category, Regulations } = require("../models");
+const fs = require("fs");
 
-db.once('open', async () => {
+db.once("open", async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    { name: 'Clothes' },
-    { name: 'Drinkware'},
-    { name: 'Hats' },
-    { name: 'Stickers' }
-   ]);
+    { name: "Clothes" },
+    { name: "Drinkware" },
+    { name: "Hats" },
+    { name: "Stickers" },
+  ]);
 
-  console.log('categories seeded');
+  console.log("categories seeded");
 
   await Product.deleteMany();
 
   const products = await Product.insertMany([
     {
-      name: 'Logo Sticker',
+      name: "Logo Sticker",
       description:
-        'Take our fabulous logo with you everywhere!  Perfect for backpacks, computers, cars!',
-      image: 'logo-sticker.png',
+        "Take our fabulous logo with you everywhere!  Perfect for backpacks, computers, cars!",
+      image: "logo-sticker.png",
       category: categories[3]._id,
       price: 2.99,
-      quantity: 500
+      quantity: 500,
     },
     {
-      name: 'PomPom Hat',
+      name: "PomPom Hat",
       description:
-        'A stunning, warm ivory chuncky knit hat with our fabulous logo.',
-      image: 'pompom-hat.png',
+        "A stunning, warm ivory chuncky knit hat with our fabulous logo.",
+      image: "pompom-hat.png",
       category: categories[2]._id,
       price: 10.99,
-      quantity: 500
+      quantity: 500,
     },
     {
-      name: 'T-shirt',
+      name: "T-shirt",
       category: categories[0]._id,
-      description:
-        'A cute taupe shirt with our fabulous logo',
-      image: 't-shirt.png',
+      description: "A cute taupe shirt with our fabulous logo",
+      image: "t-shirt.png",
       price: 17.99,
-      quantity: 20
+      quantity: 20,
     },
     {
-      name: 'Hoodie',
+      name: "Hoodie",
       category: categories[0]._id,
       description:
-        'A warm comforting hoodie with our fabulous logo on the front and back',
-      image: 'hoodie.png',
+        "A warm comforting hoodie with our fabulous logo on the front and back",
+      image: "hoodie.png",
       price: 33.99,
-      quantity: 50
+      quantity: 50,
     },
     {
-      name: 'Coffee Mug',
+      name: "Coffee Mug",
       category: categories[1]._id,
       description:
-        'A coffee mug with in great neutral colors with our fabulous logo.',
-      image: 'coffee-mug.png',
+        "A coffee mug with in great neutral colors with our fabulous logo.",
+      image: "coffee-mug.png",
       price: 14.99,
-      quantity: 100
+      quantity: 100,
     },
     {
-      name: 'Water Bottle',
+      name: "Water Bottle",
       category: categories[1]._id,
-      description:
-        'A tall white water bottle with our fabulous logo',
-      image: 'waterbottlefront.png',
+      description: "A tall white water bottle with our fabulous logo",
+      image: "waterbottlefront.png",
       price: 24.99,
-      quantity: 100
+      quantity: 100,
     },
     {
-      name: 'White T-shirt',
+      name: "White T-shirt",
       category: categories[0]._id,
       description:
-        'A soft white t-shirt with our logo proudly displayed across the back.',
-      image: 'whitetshirtfront.png',
+        "A soft white t-shirt with our logo proudly displayed across the back.",
+      image: "whitetshirtfront.png",
       price: 19.99,
-      quantity: 100
+      quantity: 100,
     },
     {
-      name: 'Pink T-shirt',
+      name: "Pink T-shirt",
       category: categories[0]._id,
       description:
-        'A soft pink t-shirt with our logo proudly displayed across the back.',
-      image: 'pink-shirt.png',
+        "A soft pink t-shirt with our logo proudly displayed across the back.",
+      image: "pink-shirt.png",
       price: 19.99,
-      quantity: 30
-    }
+      quantity: 30,
+    },
   ]);
 
-  console.log('products seeded');
+  console.log("products seeded");
 
   await User.deleteMany();
 
   await User.create({
-    email: 'test1@test.com',
-    password: 'password',
+    email: "test1@test.com",
+    password: "password",
     orders: [
       {
-        products: [products[0]._id, products[0]._id, products[1]._id]
-      }
-    ]
+        products: [products[0]._id, products[0]._id, products[1]._id],
+      },
+    ],
   });
 
   await User.create({
-    email: 'test2@test.com',
-    password: 'password'
+    email: "test2@test.com",
+    password: "password",
   });
 
-  console.log('users seeded');
+  console.log("users seeded");
 
   process.exit();
 });
