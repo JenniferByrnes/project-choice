@@ -1,5 +1,5 @@
 const db = require("../config/connection");
-const { User, Product, Category, Regulations } = require("../models");
+const { User, Product, Category } = require("../models");
 const fs = require("fs");
 
 db.once("open", async () => {

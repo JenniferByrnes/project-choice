@@ -4,7 +4,7 @@ const fs = require("fs");
 const util = require("util");
 
 db.once("open", async () => {
-  const minorLaws = await fs.readFile("./laws.json", "utf-8", (error, data) =>
+  const minorLaws = await fs.readFile("./minor.json", "utf-8", (error, data) =>
     error ? console.log(error) : console.log(JSON.parse(data))
   );
 
