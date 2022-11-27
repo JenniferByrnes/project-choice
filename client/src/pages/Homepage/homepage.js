@@ -1,4 +1,3 @@
-import React from "react";
 import{useState} from 'react';
 import mainLogo from "../../assets/mainLogo/fullLogo.png";
 import "./homepage.css";
