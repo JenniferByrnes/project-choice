@@ -66,7 +66,7 @@ function Policies() {
             </ul>
           </div>
 
-          <div className="p-3 shadow-md shadow-[#fcded3] group container flex justify-center text-left items-center mx-auto border-8 border-double border-[#fcded3]">
+          <div className="p-3 shadow-md shadow-[#fcded3] group container justify-center text-left items-center mx-auto border-8 border-double border-[#fcded3]">
             <div className="p-3">
               <div className="pb-3 text-center underline">Clinics</div>
               <ul className="list-disc">
