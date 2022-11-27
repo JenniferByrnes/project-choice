@@ -14,3 +14,48 @@ db.once("open", async () => {
 
   process.exit();
 });
+
+db.once("open", async () => {
+  const insuranceLaws = await fs.readFile(
+    "./insurance.json",
+    "utf-8",
+    (error, data) =>
+      error ? console.log(error) : console.log(JSON.parse(data))
+  );
+
+  await Regulations.deleteMany();
+
+  await Regulations.insertMany(insuranceLaws);
+
+  process.exit();
+});
+
+db.once("open", async () => {
+  const waitingperiodsLaws = await fs.readFile(
+    "./waitingperiods.json",
+    "utf-8",
+    (error, data) =>
+      error ? console.log(error) : console.log(JSON.parse(data))
+  );
+
+  await Regulations.deleteMany();
+
+  await Regulations.insertMany(waitingperiodsLaws);
+
+  process.exit();
+});
+
+db.once("open", async () => {
+  const gestationalLaws = await fs.readFile(
+    "./gestational.json",
+    "utf-8",
+    (error, data) =>
+      error ? console.log(error) : console.log(JSON.parse(data))
+  );
+
+  await Regulations.deleteMany();
+
+  await Regulations.insertMany(gestationalLaws);
+
+  process.exit();
+});

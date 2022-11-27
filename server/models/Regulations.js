@@ -18,6 +18,15 @@ const regulationsSchema = new Schema({
   parental_notification_required: {
     type: Boolean,
   },
+  banned_after_weeks_since_LMP: {
+    type: Number,
+  },
+  exception_life: {
+    type: Boolean,
+  },
+  exception_health: {
+    type: String,
+  },
 });
 
 const Regulations = mongoose.model("Regulations", regulationsSchema);
