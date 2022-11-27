@@ -29,7 +29,7 @@ function Login(props) {
   };
 
   return (
-  <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+  <div className="flex flex-col items-center justify-center px-6 py-8 pt-[60px] mx-auto md:h-screen lg:py-0">
       <h1 className="flex items-center mb-6 text-3xl text-black">
           Account Login
       </h1>

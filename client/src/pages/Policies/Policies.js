@@ -9,6 +9,8 @@ function Policies() {
       token: "O+Pe+i+97g5AJTkg",
     },
   };
+
+  // Currently not used - non functioning.  API call must be back end or we use our own DB to populate these fields
   useEffect(() => {
     fetch(
       `https://api.abortionpolicyapi.com/v1/waiting_periods/states/${state}`,
@@ -21,9 +23,10 @@ function Policies() {
       });
   }, []);
   //   console.log(waiting);
+  
   return (
     <div
-      className="w-full mb-6 p-6 md:h-screen">
+      className="w-full mb-6 p-6 pt-[60px] md:h-screen">
 
       <div className="mt-4 p-6 flex flex-col justify-center w-full h-full">
         <div className="about-heading pb-12 text-center">
@@ -39,7 +42,7 @@ function Policies() {
               <li>Colorado law limits public funding for abortion.</li>
               <br />
               <li>
-                he state generally requires that parents or legal guardians be
+                The state generally requires that parents or legal guardians be
                 notified about a minor’s abortion
               </li>
               <br />

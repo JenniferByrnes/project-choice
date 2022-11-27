@@ -44,9 +44,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div>
           <Provider store={store}>
             <Nav />
+            
             <Routes>
               <Route path="/" element={<Homepage />} />
               <Route path="/contact" element={<Contact />} />
@@ -58,9 +58,9 @@ function App() {
               <Route path="/success" element={<Success />} />
               <Route path="/policies/:state" element={<Policies />} />
             </Routes>
+  
             <Footer />
           </Provider>
-        </div>
       </Router>
     </ApolloProvider>
   );
