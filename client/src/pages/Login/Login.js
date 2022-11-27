@@ -49,7 +49,7 @@ function Login(props) {
                   </div>
                   {error ? (
                     <div>
-                      <p classNameName="error-text">The provided credentials are incorrect</p>
+                      <p className="error-text">The provided credentials are incorrect</p>
                     </div>
                   ) : null}          
                   <button type="submit" className="mt-10 mb-10 py-1 px-5 shadow-md shadow-[#dae8e3] text-black text-lg sm-rounded border-8 border-double border-[#dae8e3] hover:bg-[#dae8e3] hover:text-black hover:shadow-md hover:shadow-[#e9ecef]">Login</button>
