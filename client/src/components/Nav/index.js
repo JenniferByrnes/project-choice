@@ -9,31 +9,31 @@ const Navbar = () => {
 
   return (
     <header className="w-full bg-stone-200 text-black">
-      <div className="container max-w-6xl mx-auto px-6 py-4">
+      <div className="container max-w-6xl mx-auto px-6 py-2">
         {/* Nav Menu */}
-        <ul className="hidden md:flex items-center justify-around">
-          <li className="nav-link">
+        <ul className="hidden md:flex items-center justify-around py-4">
+          <li className="hover:text-pcCoral">
             <Link to="/">Home</Link>
           </li>
-          <li className="nav-link">
+          <li className="hover:text-pcCoral">
             <Link to="/about">About</Link>
           </li>
-          <li className="nav-link">
+          <li className="hover:text-pcCoral">
             <Link to="/contact">Contact</Link>
           </li>
-          <li className="nav-link">
+          <li className="hover:text-pcCoral">
             <Link to="/shop">Shop</Link>
           </li>
-          <li className="nav-link">
+          <li className="hover:text-pcCoral">
             <Link to="/login">Login</Link>
           </li>
-          <li className="nav-link">
+          <li className="hover:text-pcCoral">
             <Link to="/signup">Sign Up</Link>
           </li>
         </ul>
 
-        {/* Nav Hamburger Menu */}
-        <div onClick={userClick} className="md:hidden z-10 flex justify-between content-center ">
+        {/* Mobile Hamburger Header */}
+        <div onClick={userClick} className="md:hidden z-10 flex justify-between items-center hover:text-pcCoral">
           <img
             className=""
             src={Logo}
@@ -48,25 +48,25 @@ const Navbar = () => {
           className={
             !nav
               ? "hidden"
-              : "absolute top-0 left-0 w-full h-screen bg-pcGreen text-black flex flex-col justify-center items-center"
+              : "top-0 bottom-0 left-0 flex-col w-full py-5 text-lg text-center"
           }
         >
-          <li className="nav-link py-6 text-3xl">
+          <li className="hover:text-pcCoral" >
             <Link to="/">Home</Link>
           </li>
-          <li className="nav-link py-6 text-3xl">
+          <li className="hover:text-pcCoral">
             <Link to="/about">About</Link>
           </li>
-          <li className="nav-link py-6 text-3xl">
+          <li className="hover:text-pcCoral">
             <Link to="/contact">Contact</Link>
           </li>
-          <li className="nav-link py-6 text-3xl">
+          <li className="hover:text-pcCoral">
             <Link to="/shop">Shop</Link>
           </li>
-          <li className="nav-link py-6 text-3xl">
+          <li className="hover:text-pcCoral">
             <Link to="/login">Login</Link>
           </li>
-          <li className="nav-link py-6 text-3xl">
+          <li className="hover:text-pcCoral">
             <Link to="/signup">Sign Up</Link>
           </li>
         </ul>
