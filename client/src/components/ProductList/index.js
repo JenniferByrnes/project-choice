@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import ProductItem from '../ProductItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { UPDATE_PRODUCTS } from '../../utils/actions';

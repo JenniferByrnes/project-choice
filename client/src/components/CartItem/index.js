@@ -1,4 +1,3 @@
-import React from 'react';
 import { useDispatch } from 'react-redux';
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
@@ -6,6 +5,7 @@ import { idbPromise } from "../../utils/helpers";
 const CartItem = ({ item }) => {
   const dispatch = useDispatch();
 
+  // The dispatch hook allows us to dispatch the given action to the store
   const removeFromCart = item => {
     dispatch({
       type: REMOVE_FROM_CART,
@@ -15,6 +15,7 @@ const CartItem = ({ item }) => {
 
   };
 
+  // The dispatch hook allows us to dispatch the given action to the store
   const onChange = (e) => {
     const value = e.target.value;
     if (value === '0') {
@@ -35,6 +36,7 @@ const CartItem = ({ item }) => {
     }
   }
 
+  // Return a single item for the cart including image, name, price, quantity, and a trashcan to remove it
   return (
     <div className="flex-row">
       <div>

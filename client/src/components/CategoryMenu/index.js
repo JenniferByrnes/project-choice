@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -8,6 +8,7 @@ import {
 import { QUERY_CATEGORIES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 
+// Display the category menu
 function CategoryMenu() {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
@@ -16,6 +17,8 @@ function CategoryMenu() {
 
   const { loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
 
+  // The dispatch hook allows us to dispatch the given action to the store
+  // In this case the categories are collected for display
   useEffect(() => {
     if (categoryData) {
       dispatch({
@@ -35,6 +38,7 @@ function CategoryMenu() {
     }
   }, [categoryData, loading, dispatch]);
 
+  // When a category is selected, show the items from it
   const handleClick = (id) => {
     dispatch({
       type: UPDATE_CURRENT_CATEGORY,

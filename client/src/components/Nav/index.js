@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../Nav/nav.css";
 import { Link } from 'react-router-dom';
@@ -8,7 +8,7 @@ const Navbar = () => {
   const userClick = () => setNav(!nav);
 
   return (
-    <div className="fixed w-full h-[60px] flex justify-between items-center px-4 bg-[#e7e7e7] text-black">
+    <header className="fixed w-full h-[60px] flex justify-between items-center px-4 bg-stone-200 text-black">
 
       {/* Nav Menu */}
       <ul className="hidden md:flex nav-bar-menu mx-auto space-x-20">
@@ -64,7 +64,7 @@ const Navbar = () => {
           <Link to="/signup">Sign Up</Link>
         </li>
       </ul>
-    </div>
+    </header>
   );
 };
 
