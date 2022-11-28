@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer className=" bg-neutral-200 text-neutral-600">
+        <footer className=" bg-stone-200 text-stone-600">
             {/* Container */}
             <div className="container max-w-6xl py-10 mx-auto">
                 {/* Footer Flex Container */}
@@ -8,7 +8,7 @@ const Footer = () => {
                     {/* Main Content Container */}
                     <div className='flex flex-col items-center space-y-8 md:items-start md:space-y-4'>
                         {/* Resources Header */}
-                        <h2 className="text-md font-semibold text-neutral-600 ">Resource Links</h2>
+                        <h2 className="text-md font-semibold text--600 ">Resource Links</h2>
                         {/* Possible Future Release */}
                         <h2 className="hidden mb-6 text-sm font-semibold uppercase ">Legal</h2>
                         {/* Menu Container */}
