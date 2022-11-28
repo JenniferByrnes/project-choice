@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../../utils/mutations';
 import Auth from '../../utils/auth';
@@ -29,7 +29,7 @@ function Login(props) {
   };
 
   return (
-  <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+  <div className="flex flex-col items-center justify-center px-6 py-8 pt-[60px] mx-auto md:h-screen lg:py-0">
       <h1 className="flex items-center mb-6 text-3xl text-black">
           Account Login
       </h1>
@@ -49,7 +49,7 @@ function Login(props) {
                   </div>
                   {error ? (
                     <div>
-                      <p classNameName="error-text">The provided credentials are incorrect</p>
+                      <p className="error-text">The provided credentials are incorrect</p>
                     </div>
                   ) : null}          
                   <button type="submit" className="mt-10 mb-10 py-1 px-5 shadow-md shadow-[#dae8e3] text-black text-lg sm-rounded border-8 border-double border-[#dae8e3] hover:bg-[#dae8e3] hover:text-black hover:shadow-md hover:shadow-[#e9ecef]">Login</button>

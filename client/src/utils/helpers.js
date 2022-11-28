@@ -5,6 +5,7 @@ export function pluralize(name, count) {
   return name + "s";
 }
 
+// Handle local indexed DB storage for cart
 export function idbPromise(storeName, method, object) {
   return new Promise((resolve, reject) => {
     const request = window.indexedDB.open("project-choices", 1);

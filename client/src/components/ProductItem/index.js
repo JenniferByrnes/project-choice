@@ -1,5 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import { pluralize } from '../../utils/helpers';
 import { useDispatch, useSelector } from 'react-redux';
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
@@ -36,7 +34,6 @@ function ProductItem(item) {
   };
 
   return (
-
     <section className="section-card hover14">
       <div className="card">
         <div className="img-container">
@@ -55,8 +52,7 @@ function ProductItem(item) {
           <button className="btn btn-buy" onClick={addToCart}>Add to cart</button>
         </div >
       </div >
-    </section >
-    
+    </section > 
   );
 }
 
