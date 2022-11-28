@@ -23,7 +23,7 @@ function Homepage() {
         <div>
           <div className="hidden sm:block" aria-hidden="true">
             <div className="p-0">
-              <div className="border-8 border-double border-pcPink" />
+              <div className="border-8 border-double border-pcTan" />
             </div>
           </div>
         </div>
