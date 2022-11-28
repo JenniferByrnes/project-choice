@@ -4,20 +4,24 @@ const fs = require("fs");
 const util = require("util");
 
 db.once("open", async () => {
-  const minorLaws = await fs.readFile("./minor.json", "utf-8", (error, data) =>
-    error ? console.log(error) : console.log(JSON.parse(data))
+  const minorLaws = await fs.readFile(
+    "./seeds/minor.json",
+    "utf-8",
+    (error, data) =>
+      error ? console.log(error) : console.log(JSON.parse(data))
   );
 
   await Regulations.deleteMany();
 
   await Regulations.insertMany(minorLaws);
+  console.log("minor Laws Seeded");
 
   process.exit();
 });
 
 db.once("open", async () => {
   const insuranceLaws = await fs.readFile(
-    "./insurance.json",
+    "./seeds/insurance.json",
     "utf-8",
     (error, data) =>
       error ? console.log(error) : console.log(JSON.parse(data))
@@ -32,7 +36,7 @@ db.once("open", async () => {
 
 db.once("open", async () => {
   const waitingperiodsLaws = await fs.readFile(
-    "./waitingperiods.json",
+    "./seeds/waitingperiods.json",
     "utf-8",
     (error, data) =>
       error ? console.log(error) : console.log(JSON.parse(data))
@@ -47,7 +51,7 @@ db.once("open", async () => {
 
 db.once("open", async () => {
   const gestationalLaws = await fs.readFile(
-    "./gestational.json",
+    "./seeds/gestational.json",
     "utf-8",
     (error, data) =>
       error ? console.log(error) : console.log(JSON.parse(data))
