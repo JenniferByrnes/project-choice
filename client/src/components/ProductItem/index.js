@@ -34,22 +34,22 @@ function ProductItem(item) {
   };
 
   return (
-    <section className="section-card hover14">
+    <section className="section-card text-stone-600 hover14">
       <div className="card">
-        <div className="img-container">
+        <div className="img-container w-3/5 pt-20">
           <img src={`/images/${image}`} alt={name}/>
         </div>
-        <div className="infos">
-          <h3 className="name">
+        <div className="text-center px-6 py-3">
+          <h3 className="text-lg">
             {name}
           </h3>
-          <h2 className="price">
+          <h2 className="text-3xl py-2">
           {quantity} {pluralize("item", quantity)} in stock
           </h2>
-          <h2 className="price">
+          <h2 className="text-3xl py-2">
             ${price}
           </h2>
-          <button className="btn btn-buy" onClick={addToCart}>Add to cart</button>
+          <button className="w-full md:w-auto flex justify-center items-center p-2 space-x-4 font-sans font-bold text-white rounded-lg shadow-lg px-9 bg-pcPink hover:bg-opacity-90 hover:shadow-lg border transition hover:-translate-y-0.5 hover:cursor-default duration-150" onClick={addToCart}>Add to cart</button>
         </div >
       </div >
     </section > 

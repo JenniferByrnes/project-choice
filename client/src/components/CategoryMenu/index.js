@@ -9,7 +9,8 @@ import { QUERY_CATEGORIES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 
 // Display the category menu
-function CategoryMenu() {
+
+export default function CategoryMenu() {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
 
@@ -47,8 +48,14 @@ function CategoryMenu() {
   };
 
   return (
-    <div>
-      <h2>Choose a Category:</h2>
+    <div className="w-full mx-auto px-6 py-2 flex items-center justify-around md:py-4 bg-pcTan text-stone-800">
+      <button
+        onClick={() => {
+          handleClick("");
+        }}
+      >
+        All Items
+      </button>
       {categories.map((item) => (
         <button
           key={item._id}
@@ -62,5 +69,3 @@ function CategoryMenu() {
     </div>
   );
 }
-
-export default CategoryMenu;

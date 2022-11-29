@@ -5,7 +5,7 @@ export default function About() {
   return (
     <div
       name="about-tiles"
-      className="w-full mb-6 p-6 md:h-screen text-[#2b2b2b]"
+      className="w-full mb-6 p-6 md:h-screen text-stone-800"
     >
       <div className="mt-12 p-6 flex flex-col justify-center w-full">
         <div className="about-heading pb-12 text-center">
