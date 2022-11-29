@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-function Policies() {
+
+export default function Policies() {
   const { state } = useParams();
   const [waiting, setWaiting] = useState();
   const options = {
@@ -102,5 +103,3 @@ function Policies() {
     </div>
   );
 }
-
-export default Policies;

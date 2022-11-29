@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import mainLogo from "../../assets/mainLogo/fullLogo.png";
 
-function Homepage() {
+
+export default function Homepage() {
   const [state, setState] = useState("AL");
 
   function handleSelect(e) {
@@ -126,5 +127,3 @@ function Homepage() {
     </section>
   );
 }
-
-export default Homepage;
