@@ -1,18 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.186c1240.css",
-    "main.js": "/static/js/main.401558de.js",
+    "main.css": "/static/css/main.c6d19afe.css",
+    "main.js": "/static/js/main.2879a6e5.js",
+    "static/media/PC-signup.png": "/static/media/PC-signup.17a6c59e8700a0170758.png",
+    "static/media/PC-contact-us.png": "/static/media/PC-contact-us.162254e875648185f7a1.png",
+    "static/media/PC-login.png": "/static/media/PC-login.927933329805c02538db.png",
     "static/media/poster.jpeg": "/static/media/poster.b9a1f6d91cd8b8e5d899.jpeg",
     "static/media/unite.png": "/static/media/unite.7da55c31333cbe7ad53a.png",
     "static/media/fullLogo.png": "/static/media/fullLogo.9b7a514b067c8c9426a1.png",
     "static/media/pc-horizontal-logo.png": "/static/media/pc-horizontal-logo.2b386edd3f90ef1747f8.png",
     "static/media/spinner.gif": "/static/media/spinner.689d9a07cc3c3eddc116.gif",
     "index.html": "/index.html",
-    "main.186c1240.css.map": "/static/css/main.186c1240.css.map",
-    "main.401558de.js.map": "/static/js/main.401558de.js.map"
+    "main.c6d19afe.css.map": "/static/css/main.c6d19afe.css.map",
+    "main.2879a6e5.js.map": "/static/js/main.2879a6e5.js.map"
   },
   "entrypoints": [
-    "static/css/main.186c1240.css",
-    "static/js/main.401558de.js"
+    "static/css/main.c6d19afe.css",
+    "static/js/main.2879a6e5.js"
   ]
 }
