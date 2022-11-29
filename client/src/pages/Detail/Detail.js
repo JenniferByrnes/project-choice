@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { idbPromise } from "../../utils/helpers";
 
 import { QUERY_PRODUCTS } from '../../utils/queries';
-import spinner from '../../assets/spinner.gif';
+import spinner from '../../assets/images/spinner.gif';
 import Cart from '../../components/Cart';
 import {
   REMOVE_FROM_CART,
