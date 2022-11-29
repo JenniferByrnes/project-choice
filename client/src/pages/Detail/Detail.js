@@ -14,7 +14,8 @@ import {
   UPDATE_PRODUCTS,
 } from '../../utils/actions';
 
-function Detail() {
+
+export default function Detail() {
   const { id } = useParams();
   // const [currentProduct, setCurrentProduct] = useState({});
   // const { loading, data } = useQuery(QUERY_PRODUCTS);
@@ -128,5 +129,3 @@ function Detail() {
     </>
   );
 }
-
-export default Detail;

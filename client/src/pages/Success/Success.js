@@ -5,7 +5,8 @@ import { ADD_ORDER } from '../../utils/mutations';
 import { idbPromise } from '../../utils/helpers';
 
 // Reset the cart and display a success message after a completed purchase
-function Success() {
+
+export default function Success() {
   const [addOrder] = useMutation(ADD_ORDER);
 
   
@@ -44,5 +45,3 @@ function Success() {
     </div>
   );
 }
-
-export default Success;

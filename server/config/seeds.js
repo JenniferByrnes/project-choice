@@ -25,15 +25,15 @@ db.once('open', async () => {
       price: 2.99,
       quantity: 500
     },
-    {
-      name: 'PomPom Hat',
-      description:
-        'A stunning, warm ivory chuncky knit hat with our fabulous logo.',
-      image: 'pompom-hat.png',
-      category: categories[2]._id,
-      price: 10.99,
-      quantity: 500
-    },
+    // {
+    //   name: 'PomPom Hat',
+    //   description:
+    //     'A stunning, warm ivory chuncky knit hat with our fabulous logo.',
+    //   image: 'pompom-hat.png',
+    //   category: categories[2]._id,
+    //   price: 10.99,
+    //   quantity: 500
+    // },
     {
       name: 'T-shirt',
       category: categories[0]._id,

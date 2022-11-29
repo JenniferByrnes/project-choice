@@ -8,7 +8,8 @@ module.exports = {
         pcTan:    '#fcded3',
         pcGreen:  '#dae8e3',
         pcPink:   '#d98a8a',
-        pcCoral:  '#dc585d'
+        pcCoral:  '#dc585d',
+
       },
     },
   },

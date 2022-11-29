@@ -10,10 +10,10 @@ import { setContext } from "@apollo/client/link/context";
 import { Provider } from "react-redux";
 import store from "./utils/store";
 
-import Homepage from "./pages/Homepage/homepage";
-import Shop from "./pages/Shop/shop";
-import Contact from "./pages/Contact/contact";
-import About from "./pages/About/about";
+import Homepage from "./pages/Homepage/Homepage";
+import Shop from "./pages/Shop/Shop";
+import Contact from "./pages/Contact/Contact";
+import About from "./pages/About/About";
 import Nav from "./components/Nav/index";
 import Detail from "./pages/Detail/Detail";
 import Login from "./pages/Login/Login";
