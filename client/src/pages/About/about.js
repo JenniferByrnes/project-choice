@@ -1,8 +1,7 @@
-// import mainLogo from "../../assets/mainLogo/fullLogo.png";
 import posterTile from "../../assets/posterTile/poster.jpeg";
 import Tile from "../../assets/posterTile/unite.png";
 
-function About() {
+export default function About() {
   return (
     <div
       name="about-tiles"
@@ -68,5 +67,3 @@ function About() {
     </div>
   );
 }
-
-export default About;
