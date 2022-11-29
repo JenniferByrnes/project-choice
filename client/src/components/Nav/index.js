@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import Logo from "../../assets/pc-horizontal-logo.png";
+import Logo from "../../assets/images/pc-horizontal-logo.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
