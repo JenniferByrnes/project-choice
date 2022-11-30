@@ -71,7 +71,9 @@ const Cart = () => {
   if (!state.cartOpen) {
     return (
       <div className="cart-closed" onClick={toggleCart}>
-        <span role="img" aria-label="cart">
+        <span 
+        role="img" 
+        aria-label="cart">
           🛒
         </span>
       </div>
@@ -80,7 +82,7 @@ const Cart = () => {
 
   // Display the cart
   return (
-    <div className="cart">
+    <div className="cart bg-pcGreen">
       {/* Show 'exit cart' button */}
       <div className="close" onClick={toggleCart}>
         [close]
