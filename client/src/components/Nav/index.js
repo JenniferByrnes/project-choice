@@ -43,32 +43,25 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Nav Menu */}
-        <ul
+        <div
           className={
             !nav
               ? "hidden"
-              : "top-0 bottom-0 left-0 flex-col w-full py-5 text-lg text-center"
+              : "top-0 bottom-0 left-0 flex py-5 text-lg text-center justify-evenly"
           }
         >
-          <li className="hover:text-pcCoral hover:text-xl" >
-            <Link to="/">Home</Link>
-          </li>
-          <li className="hover:text-pcCoral hover:text-xl">
-            <Link to="/about">About</Link>
-          </li>
-          <li className="hover:text-pcCoral hover:text-xl">
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li className="hover:text-pcCoral hover:text-xl">
-            <Link to="/shop">Shop</Link>
-          </li>
-          <li className="hover:text-pcCoral hover:text-xl">
-            <Link to="/login">Login</Link>
-          </li>
-          <li className="hover:text-pcCoral hover:text-xl">
-            <Link to="/signup">Sign Up</Link>
-          </li>
-        </ul>
+          <div className="flex flex-col items-start">
+            <Link to="/" className="hover:text-pcCoral hover:text-xl" >Home</Link>
+            <Link to="/about" className="hover:text-pcCoral hover:text-xl" >About</Link>
+            <Link to="/contact" className="hover:text-pcCoral hover:text-xl" >Contact</Link>
+          </div>
+          <div className="flex flex-col items-start">
+            <Link to="/shop" className="hover:text-pcCoral hover:text-xl" >Shop</Link>
+            <Link to="/login" className="hover:text-pcCoral hover:text-xl" >Login</Link>
+            <Link to="/signup" className="hover:text-pcCoral hover:text-xl" >Sign Up</Link>
+
+          </div>
+        </div>
       </div>
     </header>
   );

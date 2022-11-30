@@ -9,7 +9,7 @@ export default function Homepage() {
     setState(e.target.value);
   }
   return (
-    <section className="pt-[60px]">
+    <section className="md:pt-[60px]">
       {/* Logo and optional divider line */}
       <div className="hidden md:block">
         <div className="pb-10 pt-20 max-w-6xl mx-auto">
@@ -96,7 +96,7 @@ export default function Homepage() {
             </select>
             <div className="flex flex-col items-center">
               <a href={`/policies/${state}`}>
-                <button className="mt-10 mb-10 py-1 px-5 shadow-md shadow-stone-300 text-black text-lg sm-rounded border-8 border-double border-pcTan hover:scale-110 hover:shadow-lg hover:shadow-stone-500">
+                <button className="mt-3 mb-3 md:mt-10 md:mb-10 py-1 px-5 shadow-md shadow-stone-300 text-black text-lg sm-rounded border-8 border-double border-pcTan hover:scale-110 hover:shadow-lg hover:shadow-stone-500">
                   Policies
                 </button>
               </a>
