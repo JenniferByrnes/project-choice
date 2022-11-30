@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import Logo from "../../assets/images/pc-horizontal-logo.png";
 
@@ -34,12 +33,38 @@ const Navbar = () => {
 
         {/* Mobile Hamburger Header */}
         <div onClick={userClick} className="md:hidden z-10 flex justify-between items-center hover:text-pcCoral hover:text-xl">
+          {/* This is the logo on the left */}
           <img
             src={Logo}
             style={{ width: "200px", height: "50px" }}
             alt="cover"
           />
-          {!nav ? <FaBars /> : <FaTimes />}
+          {/* This is the hamburger or giant X as needed */}
+          {!nav ?
+            <div class="md:hidden">
+              <button
+                id="menu-btn"
+                type="button"
+                class="z-40 block hamburger md:hidden focus:outline-none"
+              >
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+              </button>
+            </div>
+            :
+            <div class="md:hidden">
+              <button
+                id="menu-btn"
+                type="button"
+                class="z-40 block hamburger md:hidden focus:outline-none open"
+              >
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+              </button>
+            </div>
+          }
         </div>
 
         {/* Mobile Nav Menu */}
