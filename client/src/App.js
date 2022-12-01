@@ -21,6 +21,7 @@ import Signup from "./pages/Signup/Signup";
 import Success from "./pages/Success/Success";
 import Footer from "./components/Footer";
 import Policies from "./pages/Policies/Policies";
+
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
@@ -44,23 +45,23 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-          <Provider store={store}>
-            <Nav />
-            
-            <Routes>
-              <Route path="/" element={<Homepage />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/shop" element={<Shop />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/products/:id" element={<Detail />} />
-              <Route path="/success" element={<Success />} />
-              <Route path="/policies/:state" element={<Policies />} />
-            </Routes>
-  
-            <Footer />
-          </Provider>
+        <Provider store={store}>
+          <Nav />
+
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/products/:id" element={<Detail />} />
+            <Route path="/success" element={<Success />} />
+            <Route path="/policies/:state" element={<Policies />} />
+          </Routes>
+
+          <Footer />
+        </Provider>
       </Router>
     </ApolloProvider>
   );
