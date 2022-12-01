@@ -1,9 +1,9 @@
 var apiKey = "O+Pe+i+97g5AJTkg";
 const fs = require("fs");
-const laws = [];
-// const gestational_limits = [];
-// const insurance_coverage = [];
-// const waiting_periods = [];
+const minor = [];
+const gestational_limits = [];
+const insurance_coverage = [];
+const waiting_periods = [];
 
 function minorApi() {
   fetch("http://api.abortionpolicyapi.com/v1/minors/states/", {
@@ -13,10 +13,10 @@ function minorApi() {
     .then((res) => {
       for (const state in res) {
         // console.log({ [state]: res[state] });
-        laws.push({ [state]: res[state] });
+        minor.push({ state: state, minorRegulations: res[state] });
       }
 
-      return laws;
+      return minor;
     })
     .then((lawData) =>
       fs.writeFileSync("./minor.json", JSON.stringify(lawData))
@@ -32,10 +32,13 @@ function gestationApi() {
     .then((res) => {
       for (const state in res) {
         // console.log({ [state]: res[state] });
-        laws.push({ [state]: res[state] });
+        gestational_limits.push({
+          state: state,
+          gestationalRegulations: res[state],
+        });
       }
 
-      return laws;
+      return gestational_limits;
     })
     .then((lawData) =>
       fs.writeFileSync("./gestational.json", JSON.stringify(lawData))
@@ -51,10 +54,10 @@ function insuranceApi() {
     .then((res) => {
       for (const state in res) {
         // console.log({ [state]: res[state] });
-        laws.push({ [state]: res[state] });
+        insurance_coverage.push({ state: state, regulations: res[state] });
       }
 
-      return laws;
+      return insurance_coverage;
     })
     .then((lawData) =>
       fs.writeFileSync("./insurance.json", JSON.stringify(lawData))
@@ -70,10 +73,10 @@ function waitinperiodsgApi() {
     .then((res) => {
       for (const state in res) {
         // console.log({ [state]: res[state] });
-        laws.push({ [state]: res[state] });
+        waiting_periods.push({ state: state, regulations: res[state] });
       }
 
-      return laws;
+      return waiting_periods;
     })
     .then((lawData) =>
       fs.writeFileSync("./waitingperiods.json", JSON.stringify(lawData))
