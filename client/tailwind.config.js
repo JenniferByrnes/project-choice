@@ -2,7 +2,16 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        pcWhite:  '#fffefe',
+        pcTan:    '#fcded3',
+        pcGreen:  '#dae8e3',
+        pcPink:   '#d98a8a',
+        pcCoral:  '#dc585d',
+
+      },
+    },
   },
   plugins: [],
 }

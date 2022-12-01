@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { useDispatch, useSelector } from 'react-redux';
 import { idbPromise } from "../../utils/helpers";
 
 import { QUERY_PRODUCTS } from '../../utils/queries';
-import spinner from '../../assets/spinner.gif';
+import spinner from '../../assets/images/spinner.gif';
 import Cart from '../../components/Cart';
 import {
   REMOVE_FROM_CART,
@@ -14,7 +14,8 @@ import {
   UPDATE_PRODUCTS,
 } from '../../utils/actions';
 
-function Detail() {
+
+export default function Detail() {
   const { id } = useParams();
   // const [currentProduct, setCurrentProduct] = useState({});
   // const { loading, data } = useQuery(QUERY_PRODUCTS);
@@ -128,5 +129,3 @@ function Detail() {
     </>
   );
 }
-
-export default Detail;

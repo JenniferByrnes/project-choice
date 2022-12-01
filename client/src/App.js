@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   ApolloClient,
@@ -11,17 +10,16 @@ import { setContext } from "@apollo/client/link/context";
 import { Provider } from "react-redux";
 import store from "./utils/store";
 
-import Homepage from "./pages/Homepage/homepage";
-import Shop from "./pages/Shop/shop";
-import Contact from "./pages/Contact/contact";
-import About from "./pages/About/about";
+import Homepage from "./pages/Homepage/Homepage";
+import Shop from "./pages/Shop/Shop";
+import Contact from "./pages/Contact/Contact";
+import About from "./pages/About/About";
 import Nav from "./components/Nav/index";
 import Detail from "./pages/Detail/Detail";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import Success from "./pages/Success/Success";
 import Footer from "./components/Footer";
-import OrderHistory from "./pages/OrderHistory/OrderHistory";
 import Policies from "./pages/Policies/Policies";
 
 const httpLink = createHttpLink({
@@ -47,24 +45,23 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div>
-          <Provider store={store}>
-            <Nav />
-            <Routes>
-              <Route path="/" element={<Homepage />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/shop" element={<Shop />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/orderHistory" element={<OrderHistory />} />
-              <Route path="/products/:id" element={<Detail />} />
-              <Route path="/success" element={<Success />} />
-              <Route path="/policies/:state" element={<Policies />} />
-            </Routes>
-            <Footer />
-          </Provider>
-        </div>
+        <Provider store={store}>
+          <Nav />
+
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/products/:id" element={<Detail />} />
+            <Route path="/success" element={<Success />} />
+            <Route path="/policies/:state" element={<Policies />} />
+          </Routes>
+
+          <Footer />
+        </Provider>
       </Router>
     </ApolloProvider>
   );

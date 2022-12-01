@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from "@apollo/client";
 import { QUERY_CHECKOUT } from "../../utils/queries";
@@ -26,6 +26,7 @@ const Cart = () => {
     }
   }, [data]);
 
+  // The dispatch hook allows us to dispatch the given action to the store
   useEffect(() => {
     async function getCart() {
       const cart = await idbPromise("cart", "get");
@@ -37,10 +38,12 @@ const Cart = () => {
     }
   }, [state.cart.length, dispatch]);
 
+  // The dispatch hook allows us to dispatch the toggle cart action to the store
   function toggleCart() {
     dispatch({ type: TOGGLE_CART });
   }
 
+  // Total up the items in the cart
   function calculateTotal() {
     let sum = 0;
     state.cart.forEach((item) => {
@@ -49,6 +52,7 @@ const Cart = () => {
     return sum.toFixed(2);
   }
 
+  // Create array of items and send to Checkout
   function submitCheckout() {
     const productIds = [];
 
@@ -63,31 +67,39 @@ const Cart = () => {
     });
   }
 
+  // If the cart is closed, show cart image for user to select
   if (!state.cartOpen) {
     return (
       <div className="cart-closed" onClick={toggleCart}>
-        <span role="img" aria-label="trash">
+        <span 
+        role="img" 
+        aria-label="cart">
           🛒
         </span>
       </div>
     );
   }
 
+  // Display the cart
   return (
-    <div className="cart">
+    <div className="cart bg-pcGreen">
+      {/* Show 'exit cart' button */}
       <div className="close" onClick={toggleCart}>
         [close]
       </div>
       <h2>Shopping Cart</h2>
+      {/* Map over the items in the cart */}
       {state.cart.length ? (
         <div>
           {state.cart.map((item) => (
             <CartItem key={item._id} item={item} />
           ))}
 
+          {/* Show the total cost of the items */}
           <div className="flex-row space-between">
             <strong>Total: ${calculateTotal()}</strong>
 
+            {/* if the user is logged in, they can checkout through Stripe, otherwise, they have a message to log in */}
             {Auth.loggedIn() ? (
               <button onClick={submitCheckout}>Checkout</button>
             ) : (
@@ -96,6 +108,7 @@ const Cart = () => {
           </div>
         </div>
       ) : (
+        // If there are no items in the cart, let the user know
         <h3>
           <span role="img" aria-label="shocked">
             😱

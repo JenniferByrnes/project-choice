@@ -4,18 +4,24 @@ import Jumbotron from '../../components/Jumbotron';
 import { ADD_ORDER } from '../../utils/mutations';
 import { idbPromise } from '../../utils/helpers';
 
-function Success() {
+// Reset the cart and display a success message after a completed purchase
+
+export default function Success() {
   const [addOrder] = useMutation(ADD_ORDER);
 
+  
   useEffect(() => {
+    // Saves the completed order
     async function saveOrder() {
       const cart = await idbPromise('cart', 'get');
       const products = cart.map((item) => item._id);
 
+      // If there were products in the order, ...
       if (products.length) {
         const { data } = await addOrder({ variables: { products } });
         const productData = data.addOrder.products;
 
+        // Reset the cart (Empty it)
         productData.forEach((item) => {
           idbPromise('cart', 'delete', item);
         });
@@ -30,7 +36,7 @@ function Success() {
   }, [addOrder]);
 
   return (
-    <div>
+    <div className="pt-[60px]">
       <Jumbotron>
         <h1>Success!</h1>
         <h2>Thank you for your purchase!</h2>
@@ -39,5 +45,3 @@ function Success() {
     </div>
   );
 }
-
-export default Success;
