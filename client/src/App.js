@@ -21,6 +21,8 @@ import Signup from "./pages/Signup/Signup";
 import Success from "./pages/Success/Success";
 import Footer from "./components/Footer";
 import Policies from "./pages/Policies/Policies";
+
+
 const httpLink = createHttpLink({
   uri: "/graphql",
 });

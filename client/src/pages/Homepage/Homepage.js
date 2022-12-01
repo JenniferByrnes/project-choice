@@ -10,6 +10,7 @@ export default function Homepage() {
   }
   return (
     <section className="md:pt-[60px]">
+      
       {/* Logo and optional divider line */}
       <div className="hidden md:block">
         <div className="pb-10 pt-20 max-w-6xl mx-auto">
@@ -38,6 +39,7 @@ export default function Homepage() {
             <div className="font-extrabold text-center leading-10">
               To find the abortion regulations in your area select your State.
             </div>
+
             <select
               id="period"
               className="mt-1 block w-full rounded-md border-4 bg-white py-2 px-3 shadow-sm  sm:text-sm" onChange={handleSelect}
