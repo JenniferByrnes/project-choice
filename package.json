@@ -17,6 +17,8 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.1",
+    "graphql": "^16.6.0",
     "react-redux": "^8.0.4",
     "redux": "^4.2.0"
   }
