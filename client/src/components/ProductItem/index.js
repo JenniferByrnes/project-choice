@@ -34,8 +34,8 @@ function ProductItem(item) {
 
   return (
     <section className="section-card flex h-96 py-7 px-2 text-stone-600">
-      <div className="card flex items-center w-80 max-w-xs rounded-xl px-4 py-8 overflow-hidden shadow-2xl drop-shadow-2xl bg-gradient-to-r via-white from-pcTan to-pcTan">
-        <div className="img-container w-3/4 pt-2 drop-shadow-2xl origin-bottom -rotate-6 ...">
+      <div className="card flex items-center w-80 max-w-xs rounded-xl px-4 py-8 overflow-hidden shadow-2xl drop-shadow-2xl bg-gradient-to-r via-white from-indigo-100 to-white">
+        <div className="img-container w-3/4 pt-2 drop-shadow-2xl origin-bottom ...">
           <img src={`/images/${image}`} alt={name} className="drop-shadow-2xl duration-200 hover:scale-125"/>
         </div>
         <div className="text-center px-4 py-3">

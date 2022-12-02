@@ -47,6 +47,11 @@
   transform: rotate(8deg);
 }
 
+.cart img {
+  width: 70px;
+  margin-right: 1rem;
+}
+
 @media screen and (max-width: 768px) {
   .cart {
     position: relative;
