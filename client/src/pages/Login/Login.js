@@ -41,7 +41,7 @@ function Login(props) {
         <div className="form-container">
           <div className="form-inner-container">
             <h1 className="md:text-2xl items-center justify-center">
-              Sign in to your account
+              Sign in to your account to shop.
             </h1>
             <form className="space-y-4 md:space-y-6 " onSubmit={handleFormSubmit}>
               <div>

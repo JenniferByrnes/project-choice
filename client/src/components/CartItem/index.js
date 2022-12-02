@@ -39,8 +39,8 @@ const CartItem = ({ item }) => {
   // Return a single item for the cart including image, name, price, quantity, and a trashcan to remove it
   return (
     <div className="section-card flex h-26 py-7 px-2 text-stone-600">
-      <div className="card flex items-center w-80 max-w-xs rounded-xl px-4 py-8 overflow-hidden shadow-2xl drop-shadow-2xl bg-gradient-to-r via-white from-pcTan to-pcTan">
-      <div className="img-container w-3/4 pt-2 drop-shadow-2xl origin-bottom -rotate-6 ...">
+      <div className="card flex items-center w-80 max-w-xs rounded-xl px-4 py-4 overflow-hidden shadow-2xl drop-shadow-2xl bg-gradient-to-r from-indigo-100 to-white">
+      <div className="img-container w-3/4 pt-2 drop-shadow-2xl">
         <img
           src={`/images/${item.image}`}
           alt=""

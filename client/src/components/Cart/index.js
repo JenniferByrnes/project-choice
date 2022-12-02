@@ -26,7 +26,7 @@ const Cart = () => {
     }
   }, [data]);
 
-  // The dispatch hook allows us to dispatch the given action to the store
+  // The dispatch hook allows us to send the given action to the store
   useEffect(() => {
     async function getCart() {
       const cart = await idbPromise("cart", "get");
@@ -38,7 +38,7 @@ const Cart = () => {
     }
   }, [state.cart.length, dispatch]);
 
-  // The dispatch hook allows us to dispatch the toggle cart action to the store
+  // The dispatch hook allows us to send the toggle cart action to the store
   function toggleCart() {
     dispatch({ type: TOGGLE_CART });
   }
@@ -70,8 +70,9 @@ const Cart = () => {
   // If the cart is closed, show cart image for user to select
   if (!state.cartOpen) {
     return (
-      <div className="cart-closed" onClick={toggleCart}>
-        <span 
+      // this is "cart-closed"
+      <div className="fixed top-20 right-2 bg-pcGreen" onClick={toggleCart}>
+        <span className="bg-yellow-200"
         role="img" aria-label="cart">
           🛒
         </span>
@@ -81,9 +82,9 @@ const Cart = () => {
 
   // Display the cart
   return (
-    <div className="cart bg-pcGreen">
+    <div className="cart bg-indigo-100">
       {/* Show 'exit cart' button */}
-      <div className="close" onClick={toggleCart}>
+      <div className="" onClick={toggleCart}>
         [close]
       </div>
       <h2>Shopping Cart</h2>

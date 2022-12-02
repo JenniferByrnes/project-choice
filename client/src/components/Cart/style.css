@@ -1,4 +1,4 @@
-.cart {
+/* .cart {
   position: fixed;
   top: 0;
   right: 0;
@@ -24,13 +24,13 @@
   right: .5rem;
   cursor: pointer;
   color: var(--tertiary);
-}
+} */
 
 .cart .close:hover {
   text-decoration: underline;
 }
 
-.cart-closed {
+/* .cart-closed {
   position: fixed;
   top: 2%;
   right: 1%;
@@ -41,12 +41,12 @@
   padding: .25rem;
   width: 50px;
   height: 50px;
-}
+} */
 
 .cart-closed:hover {
   transform: rotate(8deg);
 }
-
+/* 
 .cart img {
   width: 70px;
   margin-right: 1rem;
@@ -65,4 +65,4 @@
     position: relative;
     margin: 0 auto;
   }
-}
+} */
