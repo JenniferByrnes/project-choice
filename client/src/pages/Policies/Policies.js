@@ -27,11 +27,11 @@ export default function Policies() {
   
   return (
     <div
-      className="w-full mb-6 p-6 pt-[60px] md:h-screen">
+      className="w-full mb-6 p-6 pt-[60px]">
 
       <div className="mt-4 p-6 flex flex-col justify-center w-full h-full">
-        <div className="about-heading pb-12 text-center">
-          <h2 className="text-4xl inline border-b-4 border-[#dc585d] py-2">
+        <div className="pb-12 text-center">
+          <h2 className="text-4xl inline border-b-4 border-pcCoral py-2">
             Colorado
           </h2>
         </div>

@@ -4,18 +4,17 @@ import Tile from "../../assets/posterTile/unite.png";
 export default function About() {
   return (
     <div
-      name="about-tiles"
-      className="w-full mb-6 p-6 md:h-screen text-stone-800"
+      className="container mx-auto p-6 text-stone-800"
     >
-      <div className="mt-12 p-6 flex flex-col justify-center w-full">
-        <div className="about-heading pb-12 text-center">
-          <h2 className="text-4xl inline border-b-4 border-[#dc585d] py-3">
+      <div className="md:mt-12 p-6 flex flex-col justify-center w-full">
+        <div className="pb-6 md:pb-12 text-center">
+          <h2 className="text-4xl inline border-b-4 border-pcCoral py-3">
             About Project Choice
           </h2>
         </div>
 
-        <div className="pb-6 grid grid-cols-2 auto-cols-max gap-x-4 gap-y-8">
-          <div className="shadow-lg shadow-[#dae8e3] group container flex justify-center text-center items-center mx-auto border-8 border-double border-[#dae8e3]">
+        <div className="md:pb-6 grid md:grid-cols-2 gap-x-4 gap-y-8 ">
+          <div className="hidden md:flex shadow-lg shadow-pcGreen container justify-center text-center items-center mx-auto border-8 border-double border-pcGreen">
 
             <img
               className="pt-4 pb-2"
@@ -26,33 +25,31 @@ export default function About() {
 
           </div>
 
-          <div className="p-4 shadow-lg shadow-[#dae8e3] group container flex justify-center text-center items-center mx-auto border-8 border-double border-[#dae8e3]">
+          <div className="p-4 shadow-lg shadow-pcGreen container flex justify-center text-center items-center mx-auto border-8 border-double border-pcGreen">
             <h2>
               <h2>
-                At Project Choice we believe in body autonomy and the womans
+                At Project Choice we believe in body autonomy and the woman's
                 absolute right to chose. The last thing that should stand in
-                someones way is lack of information, and with this passion in
-                mind- Project Choice came to be.
+                someone's way is lack of information, and with this passion in
+                mind - Project Choice came to be.
                 <br />
                 <br />
-                By filling out a simple form, we
-                connect users to clinics closest to them, laws in their
-                surrounding areas, resources, and even a shop with all proceeds
-                going to Planned Parenthood.
+                We provide information about the laws in all 50 states provided by the AbortionAPI
+                The laws displayed cover whether or not abortion is legal, any special age restrictions, waiting periods, and Medicare coverage.  We also have a faux shop with all with our branded merchandise.
               </h2>
             </h2>
           </div>
 
-          <div className="p-4 shadow-lg shadow-[#dae8e3] group container flex justify-center text-center items-center mx-auto border-8 border-double border-[#dae8e3] ">
+          <div className="p-4 shadow-lg shadow-pcGreen container flex justify-center text-center items-center mx-auto border-8 border-double border-pcGreen ">
             <h2>
-              We partner with companies that believe abortion is health care. Our partners include Planned Parenthood, The National Abortion Federation, Abortionfunds.org, and local politicians to make lasting change in policy.
+              Below are links to excellent resources for current information.  To take action for keep abortion and all women's healthcare safe, legal and affordable, contact your local politicians to make lasting change in policy.
               <br />
               <br />
-              In the future, we will have a direct link from our site to Planned Parenthood. Our main goal is to make women's healthcare easy and complete.
+              Our first goal is to provide information.  Our long range goal is to keep decisions about women's healthcare where these decisions belong - with the woman.  In a future version of our program, our shop would be live and proceeds would benefit organizations that help women.
             </h2>
           </div>
 
-          <div className="p-4 shadow-lg shadow-[#dae8e3] group container flex justify-center text-center items-center mx-auto border-8 border-double border-[#dae8e3]">
+          <div className="hidden md:flex p-4 shadow-lg shadow-pcGreen container justify-center text-center items-center mx-auto border-8 border-double border-pcGreen">
             <div>
               <img
                 className="homepageLogo"
