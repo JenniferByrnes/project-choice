@@ -7,7 +7,6 @@ import CartItem from "../CartItem";
 import Auth from "../../utils/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions";
-import "./style.css";
 
 const stripePromise = loadStripe(
   "pk_live_51Ly1taCwWJ9DSQafQ57gfY5V2rFtaGIZlZFmccnsL6XqIOAJqEb1nQV6UFglxuGb7fUMomduryFiYadySk0g7hQj004FujWrWc"
@@ -71,51 +70,71 @@ const Cart = () => {
   if (!state.cartOpen) {
     return (
       // this is "cart-closed"
-      <div className="fixed top-20 right-2 bg-pcGreen" onClick={toggleCart}>
-        <span className="bg-yellow-200"
-        role="img" aria-label="cart">
+      <div className="absolute top-32 right-2 md:top-5"
+        onClick={toggleCart}>
+        <div
+          className="inline-block text-4xl duration-200 hover:rotate-12 cursor-default"
+          role="img"
+          aria-label="cart">
           🛒
-        </span>
+        </div>
       </div>
     );
   }
 
   // Display the cart
   return (
-    <div className="cart bg-indigo-100">
-      {/* Show 'exit cart' button */}
-      <div className="" onClick={toggleCart}>
-        [close]
-      </div>
-      <h2>Shopping Cart</h2>
-      {/* Map over the items in the cart */}
-      {state.cart.length ? (
-        <div>
-          {state.cart.map((item) => (
-            <CartItem key={item._id} item={item} />
-          ))}
-
-          {/* Show the total cost of the items */}
-          <div className="flex-row space-between">
-            <strong>Total: ${calculateTotal()}</strong>
-
-            {/* if the user is logged in, they can checkout through Stripe, otherwise, they have a message to log in */}
-            {Auth.loggedIn() ? (
-              <button onClick={submitCheckout}>Checkout</button>
-            ) : (
-              <span>(log in to check out)</span>
-            )}
-          </div>
-        </div>
-      ) : (
-        // If there are no items in the cart, let the user know
-        <h3>
-          <span role="img" aria-label="shocked">
-            😱
+    <div className="absolute top-0 z-50 h-screen min-w-full">
+      <div className="flex flex-col items-center justify-center w-full sm:mx-auto p-6 bg-pcGreen">
+        <div className="w-full">
+        <div className="flex justify-between cursor-default">
+          <span className="text-3xl">Your Cart</span>
+          {/* Show 'exit cart' button */}
+          <span className="text-xl" onClick={toggleCart}>
+            X
           </span>
-          You haven't added anything to your cart yet!
-        </h3>
-      )}
+        </div>
+        </div>
+
+        {/* Map over the items in the cart */}
+        {state.cart.length ? (
+          <div className="w-fit">
+            {state.cart.map((item) => (
+              <CartItem key={item._id} item={item} />
+            ))}
+
+            {/* Show the total cost of the items */}
+            <div className="flex flex-col space-between text-end items-end">
+              <div className="text-3xl">Total: ${calculateTotal()}</div>
+
+              {/* if the user is logged in, they can checkout through Stripe, otherwise, they have a message to log in */}
+              {Auth.loggedIn() ? (
+                <div className="group w-fit" >
+                  <button
+                    className="w-28 transition-all duration-150 bg-green-500 font-bold text-white border-b-8 border-b-green-500 rounded-lg group-hover:border-t-8 group-hover:border-b-0 group-hover:bg-green-500 group-hover:border-t-green-500 group-hover:shadow-lg cursor-auto"
+                  >
+                    <div
+                      class="py-4 px-2 duration-150 bg-green-300 rounded-lg group-hover:bg-green-500" onClick={submitCheckout}
+                    >
+                      Checkout
+                    </div>
+                  </button>
+                </div>
+              ) : (
+                <span className="text-xl">(You must log in to check out)</span>
+              )}
+            </div>
+          </div>
+        ) : (
+          // If there are no items in the cart, let the user know
+          <h3>
+            <span role="img" aria-label="shocked">
+              😱 
+            </span>
+            Your cart is empty.
+          </h3>
+        )}
+      </div>
     </div>
   );
 };
