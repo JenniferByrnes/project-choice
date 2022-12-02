@@ -108,19 +108,17 @@ export default function Homepage() {
         <div className="overflow-hidden border-8 border-double border-pcTan sm:rounded-md justify-center items-center">
           <div className="bg-white px-4 py-5 sm:p-6 text-center lg:text-left">
             <div className="font-extrabold leading-10 text-center lg:text-left">
-              ABORTION IS HEALTH CARE.
+              ABORTION IS HEALTH CARE!
             </div>
-            At Project Choice we believe in body autonomy and the womans
-            absolute right to chose. The last thing that should stand in your
-            way is lack of information, and so our project was born.
+            At Project Choice we believe in body autonomy and the woman's
+            absolute right to chose. The last thing that should stand in the
+            way is lack of information, and that is the reason for this project.
             <br />
             <br />
-            By filling out this form you will be connected with clinics
-            closest to you, laws in your area, and many other resources to
-            help keep you safe and healthy.
+            Simply select your state to see policies in your area to include legality, gestational limits, waiting periods, and special rules for minors.  We have a shop with branded merchandise whose proceeds benefit Planned Parenthood.  At the footer are links to organizations that can help.
             <br />
             <br />
-            If you have any additional questions, please contact us!
+            If you have any suggestions for us, please use our Contact Form!
           </div>
         </div>
 

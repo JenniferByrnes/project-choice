@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 import Logo from "../../assets/images/pc-horizontal-logo.png";
+import './nav.css';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -22,12 +23,6 @@ const Navbar = () => {
           </li>
           <li className="hover:text-pcCoral hover:border-b hover:border-pcCoral">
             <Link to="/shop">Shop</Link>
-          </li>
-          <li className="hover:text-pcCoral hover:border-b hover:border-pcCoral">
-            <Link to="/login">Login</Link>
-          </li>
-          <li className="hover:text-pcCoral hover:border-b hover:border-pcCoral">
-            <Link to="/signup">Sign Up</Link>
           </li>
         </ul>
 

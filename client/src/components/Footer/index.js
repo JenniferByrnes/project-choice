@@ -1,5 +1,3 @@
-import './footer.css';
-
 const Footer = () => {
   return (
     <footer className="flex flex-col md:flex-row bg-stone-200 text-stone-600">
