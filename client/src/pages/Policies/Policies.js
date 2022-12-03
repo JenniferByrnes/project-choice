@@ -13,37 +13,24 @@ export default function Policies() {
 
   // Currently not used - non functioning.  API call must be back end or we use our own DB to populate these fields
   useEffect(() => {
-    fetch(
-      `https://api.abortionpolicyapi.com/v1/waiting_periods/states/${state}`,
-      options
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setWaiting(data);
-      });
+    // fetch(
+    //   `https://api.abortionpolicyapi.com/v1/waiting_periods/states/${state}`,
+    //   options
+    // )
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     console.log(data);
+    //     setWaiting(data);
+    //   });
   }, []);
   //   console.log(waiting);
-  const usStateLaws = [{
-    state: 'Texas',
-    regulations: {
-      waiting_period_hours: 24,
-      counseling_waived_condition: 'The ultrasound must take place at least 24 hours before the abortion unless the patient lives more than 100 miles from an abortion provider or if the pregnancy is the result of rape or incest or if the fetus has a lethal anomaly.',
-      counseling_visits: 2
-    }
-  },
-  {
-    state: 'Alaska',
-    regulations: {
-      counseling_visits: 1,
-      'Last Updated': '2022-02-15T21:04:41.000Z'
-    }
-  },
-  {
-    state: 'West Virginia',
-    regulations: { waiting_period_hours: 24, counseling_visits: 1 }
-  }
-]
+
+
+const gestationalRegulations={"banned_after_weeks_since_LMP":15,"exception_life":true}
+const medicaidRegulations={"medicaid_exception_rape_or_incest":true,"medicaid_exception_life":true,"exchange_coverage_no_restrictions":true,"private_coverage_no_restrictions":true,"medicaid_exception_fetal":"Serious fetal anomaly","Last Updated":"2021-05-21T22:14:49.000Z"}
+const minorRegulations={"parental_consent_required":true,"judicial_bypass_available":true,"below_age":18,"parents_required":1}
+const waitingPeriodRegulations={"waiting_period_hours":24,"counseling_visits":1}
+const stateLaws = {"exception_rape_or_incest":true,"exception_health":"Physical","banned_after_weeks_since_LMP":0,"exception_life":true,"Last Updated":"2022-08-29T21:34:59.000Z"}
 
 
 
@@ -59,9 +46,14 @@ export default function Policies() {
         </div>
 
         <div className="pb-3 grid grid-cols-2 auto-cols-max gap-x-4 gap-y-8">
-          <div className="p-3 shadow-md shadow-pcTan group container justify-center text-center items-center mx-auto border-8 border-double border-pcTan">
+          <div className="p-3 shadow-md shadow-pcTan group container justify-center items-center mx-auto border-8 border-double border-pcTan">
             <div className="p-3 text-center underline ">Restrictions</div>
-            <ul className=" p-3 text-left list-disc">
+            <div className="p-3 underline ">Laws</div>
+            <ul className=" p-3 list-disc">
+            {!gestationalRegulations.banned_after_weeks_since_LMP ? (<li>{state} has no laws limiting abortions.</li>) : ( <div>
+              { (gestationalRegulations.banned_after_weeks_since_LMP === 99) ? (<li>{state} has no laws limiting abortions.</li>) : (<li>{state} allows abortions up to {gestationalRegulations.banned_after_weeks_since_LMP} weeks.</li>)}</div>)}
+
+              
               <li>Colorado law limits public funding for abortion.</li>
               <br />
               <li>
