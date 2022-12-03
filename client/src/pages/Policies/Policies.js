@@ -24,7 +24,29 @@ export default function Policies() {
       });
   }, []);
   //   console.log(waiting);
-  
+  const usStateLaws = [{
+    state: 'Texas',
+    regulations: {
+      waiting_period_hours: 24,
+      counseling_waived_condition: 'The ultrasound must take place at least 24 hours before the abortion unless the patient lives more than 100 miles from an abortion provider or if the pregnancy is the result of rape or incest or if the fetus has a lethal anomaly.',
+      counseling_visits: 2
+    }
+  },
+  {
+    state: 'Alaska',
+    regulations: {
+      counseling_visits: 1,
+      'Last Updated': '2022-02-15T21:04:41.000Z'
+    }
+  },
+  {
+    state: 'West Virginia',
+    regulations: { waiting_period_hours: 24, counseling_visits: 1 }
+  }
+]
+
+
+
   return (
     <div
       className="w-full mb-6 p-6 pt-[60px]">
@@ -32,12 +54,12 @@ export default function Policies() {
       <div className="mt-4 p-6 flex flex-col justify-center w-full h-full">
         <div className="pb-12 text-center">
           <h2 className="text-4xl inline border-b-4 border-pcCoral py-2">
-            Colorado
+          {state}
           </h2>
         </div>
 
         <div className="pb-3 grid grid-cols-2 auto-cols-max gap-x-4 gap-y-8">
-          <div className="p-3 shadow-md shadow-[#fcded3] group container justify-center text-center items-center mx-auto border-8 border-double border-[#fcded3]">
+          <div className="p-3 shadow-md shadow-pcTan group container justify-center text-center items-center mx-auto border-8 border-double border-pcTan">
             <div className="p-3 text-center underline ">Restrictions</div>
             <ul className=" p-3 text-left list-disc">
               <li>Colorado law limits public funding for abortion.</li>
@@ -67,7 +89,7 @@ export default function Policies() {
             </ul>
           </div>
 
-          <div className="p-3 shadow-md shadow-[#fcded3] group container justify-center text-left items-center mx-auto border-8 border-double border-[#fcded3]">
+          <div className="p-3 shadow-md shadow-pcTan group container justify-center text-left items-center mx-auto border-8 border-double border-pcTan">
             <div className="p-3">
               <div className="pb-3 text-center underline">Clinics</div>
               <ul className="list-disc">
