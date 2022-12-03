@@ -70,11 +70,11 @@ const Cart = () => {
   if (!state.cartOpen) {
     return (
       // this is "cart-closed"
-      <div className="absolute top-32 right-2 md:top-5"
-        onClick={toggleCart}>
+      <div className="absolute top-32 right-2 md:top-5">
         <div
           className="inline-block text-4xl duration-200 hover:rotate-12 cursor-default"
           role="img"
+          onClick={toggleCart}
           aria-label="cart">
           🛒
         </div>
@@ -84,16 +84,17 @@ const Cart = () => {
 
   // Display the cart
   return (
-    <div className="absolute top-0 z-50 h-screen min-w-full">
+    <div className="absolute top-0 right-0 z-50">
       <div className="flex flex-col items-center justify-center w-full sm:mx-auto p-6 bg-pcGreen">
         <div className="w-full">
-        <div className="flex justify-between cursor-default">
-          <span className="text-3xl">Your Cart</span>
-          {/* Show 'exit cart' button */}
-          <span className="text-xl" onClick={toggleCart}>
-            X
-          </span>
-        </div>
+          <div className="flex justify-between cursor-default">
+            <span className="text-3xl">Your Cart</span>
+            {/* Show 'exit cart' button */}
+            <span className="text-xl"
+              onClick={toggleCart}>
+              X
+            </span>
+          </div>
         </div>
 
         {/* Map over the items in the cart */}
@@ -129,7 +130,7 @@ const Cart = () => {
           // If there are no items in the cart, let the user know
           <h3>
             <span role="img" aria-label="shocked">
-              😱 
+              😱
             </span>
             Your cart is empty.
           </h3>
