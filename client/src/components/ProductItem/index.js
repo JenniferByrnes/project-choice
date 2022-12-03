@@ -49,12 +49,12 @@ function ProductItem(item) {
 
 
           {/* Button Group --> */}
-            <div class="group">
+            <div className="group">
               <button
-                class="w-28 transition-all duration-150 bg-pcCoral font-bold text-white border-b-8 border-b-pcCoral rounded-lg group-hover:border-t-8 group-hover:border-b-0 group-hover:bg-pcCoral group-hover:border-t-pcCoral group-hover:shadow-lg"
+                className="w-28 transition-all duration-150 bg-pcCoral font-bold text-white border-b-8 border-b-pcCoral rounded-lg group-hover:border-t-8 group-hover:border-b-0 group-hover:bg-pcCoral group-hover:border-t-pcCoral group-hover:shadow-lg"
               >
                 <div
-                  class="py-4 px-2 duration-150 bg-pcPink rounded-lg group-hover:bg-pcCoral" onClick={addToCart}
+                  className="py-4 px-2 duration-150 bg-pcPink rounded-lg group-hover:bg-pcCoral" onClick={addToCart}
                 >
                   Add to cart
                 </div>

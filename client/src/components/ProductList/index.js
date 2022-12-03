@@ -47,7 +47,7 @@ function ProductList() {
   return (
     <div className="justify-center p-4">
 
-      <div class="flex">
+      <div className="flex">
         {state.products.length ? (
           <div className="flex flex-wrap justify-evenly">
             {filterProducts().map((product) => (

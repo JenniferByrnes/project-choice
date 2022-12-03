@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import RegulationsGest from "../../components/RegulationsGest";
+import RegulationsMinor from "../../components/RegulationsMinor";
+import RegulationsWait from "../../components/RegulationsWait";
+import RegulationsMedicaid from "../../components/RegulationsMedicaid";
 
 
 export default function Policies() {
@@ -26,11 +30,11 @@ export default function Policies() {
   //   console.log(waiting);
 
 
-const gestationalRegulations={"banned_after_weeks_since_LMP":15,"exception_life":true}
-const medicaidRegulations={"medicaid_exception_rape_or_incest":true,"medicaid_exception_life":true,"exchange_coverage_no_restrictions":true,"private_coverage_no_restrictions":true,"medicaid_exception_fetal":"Serious fetal anomaly","Last Updated":"2021-05-21T22:14:49.000Z"}
-const minorRegulations={"parental_consent_required":true,"judicial_bypass_available":true,"below_age":18,"parents_required":1}
-const waitingPeriodRegulations={"waiting_period_hours":24,"counseling_visits":1}
-const stateLaws = {"exception_rape_or_incest":true,"exception_health":"Physical","banned_after_weeks_since_LMP":0,"exception_life":true,"Last Updated":"2022-08-29T21:34:59.000Z"}
+
+  const medicaidRegulations = { "medicaid_exception_rape_or_incest": true, "medicaid_exception_life": true, "exchange_coverage_no_restrictions": true, "private_coverage_no_restrictions": true, "medicaid_exception_fetal": "Serious fetal anomaly", "Last Updated": "2021-05-21T22:14:49.000Z" }
+  const minorRegulations = { "parental_consent_required": true, "judicial_bypass_available": true, "below_age": 18, "parents_required": 1 }
+  const waitingPeriodRegulations = { "waiting_period_hours": 24, "counseling_visits": 1 }
+  const stateLaws = { "exception_rape_or_incest": true, "exception_health": "Physical", "banned_after_weeks_since_LMP": 0, "exception_life": true, "Last Updated": "2022-08-29T21:34:59.000Z" }
 
 
 
@@ -41,19 +45,21 @@ const stateLaws = {"exception_rape_or_incest":true,"exception_health":"Physical"
       <div className="mt-4 p-6 flex flex-col justify-center w-full h-full">
         <div className="pb-12 text-center">
           <h2 className="text-4xl inline border-b-4 border-pcCoral py-2">
-          {state}
+            {state}
           </h2>
         </div>
 
         <div className="pb-3 grid grid-cols-2 auto-cols-max gap-x-4 gap-y-8">
           <div className="p-3 shadow-md shadow-pcTan group container justify-center items-center mx-auto border-8 border-double border-pcTan">
             <div className="p-3 text-center underline ">Restrictions</div>
-            <div className="p-3 underline ">Laws</div>
+            <div className="p-3 underline ">Laws based on gestation</div>
             <ul className=" p-3 list-disc">
-            {!gestationalRegulations.banned_after_weeks_since_LMP ? (<li>{state} has no laws limiting abortions.</li>) : ( <div>
-              { (gestationalRegulations.banned_after_weeks_since_LMP === 99) ? (<li>{state} has no laws limiting abortions.</li>) : (<li>{state} allows abortions up to {gestationalRegulations.banned_after_weeks_since_LMP} weeks.</li>)}</div>)}
+              <RegulationsGest stateUS={state}></RegulationsGest>
+              <RegulationsMinor stateUS={state}></RegulationsMinor>
+              <RegulationsMedicaid stateUS={state}></RegulationsMedicaid>
+              <RegulationsWait stateUS={state}></RegulationsWait>
 
-              
+              <br /><br /><br />
               <li>Colorado law limits public funding for abortion.</li>
               <br />
               <li>
