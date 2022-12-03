@@ -38,7 +38,7 @@ export default function Signup() {
         Create Your Account
       </h1>
       <div
-        class="relative flex flex-col m-6 space-y-10 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 md:m-0"
+        className="relative flex flex-col m-6 space-y-10 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 md:m-0"
       >
         {/* Left Side */}
       {/* Card interior placement */}
@@ -67,7 +67,7 @@ export default function Signup() {
         </div>
       </div>
               {/* Right Side */}
-              <img src={image} alt="" class="w-[430px] hidden md:block" />
+              <img src={image} alt="" className="w-[430px] hidden md:block" />
       </div>
     </div>
   );

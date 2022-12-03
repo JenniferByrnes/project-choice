@@ -115,7 +115,7 @@ const Cart = () => {
                     className="w-28 transition-all duration-150 bg-green-500 font-bold text-white border-b-8 border-b-green-500 rounded-lg group-hover:border-t-8 group-hover:border-b-0 group-hover:bg-green-500 group-hover:border-t-green-500 group-hover:shadow-lg cursor-auto"
                   >
                     <div
-                      class="py-4 px-2 duration-150 bg-green-300 rounded-lg group-hover:bg-green-500" onClick={submitCheckout}
+                      className="py-4 px-2 duration-150 bg-green-300 rounded-lg group-hover:bg-green-500" onClick={submitCheckout}
                     >
                       Checkout
                     </div>
