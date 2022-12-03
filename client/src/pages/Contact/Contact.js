@@ -12,7 +12,7 @@ const Contact = () => {
           <p className='py-6'>Please use our contact form if you have feedback for us.</p>
         </div>
         <div
-          class="relative flex flex-col w-full mx-auto m-6 space-y-10 shadow-2xl rounded-2xl md:flex-row md:space-y-0 md:m-0"
+          className="relative flex flex-col w-full mx-auto m-6 space-y-10 shadow-2xl rounded-2xl md:flex-row md:space-y-0 md:m-0"
         >
           {/* Left Side */}
           {/* form */}
@@ -42,7 +42,7 @@ const Contact = () => {
           </form>
 
           {/* Right Side */}
-          <img src={image} alt="" class="w-[430px] hidden lg:block" />
+          <img src={image} alt="" className="w-[430px] hidden lg:block" />
         </div>
       </div>
     </div>

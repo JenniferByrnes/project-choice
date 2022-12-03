@@ -36,27 +36,27 @@ const Navbar = () => {
           />
           {/* This is the hamburger or giant X as needed */}
           {!nav ?
-            <div class="md:hidden">
+            <div className="md:hidden">
               <button
                 id="menu-btn"
                 type="button"
-                class="z-40 block hamburger md:hidden focus:outline-none"
+                className="z-40 block hamburger md:hidden focus:outline-none"
               >
-                <span class="hamburger-top"></span>
-                <span class="hamburger-middle"></span>
-                <span class="hamburger-bottom"></span>
+                <span className="hamburger-top"></span>
+                <span className="hamburger-middle"></span>
+                <span className="hamburger-bottom"></span>
               </button>
             </div>
             :
-            <div class="md:hidden">
+            <div className="md:hidden">
               <button
                 id="menu-btn"
                 type="button"
-                class="z-40 block hamburger md:hidden focus:outline-none open"
+                className="z-40 block hamburger md:hidden focus:outline-none open"
               >
-                <span class="hamburger-top"></span>
-                <span class="hamburger-middle"></span>
-                <span class="hamburger-bottom"></span>
+                <span className="hamburger-top"></span>
+                <span className="hamburger-middle"></span>
+                <span className="hamburger-bottom"></span>
               </button>
             </div>
           }
