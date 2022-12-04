@@ -12,6 +12,8 @@ export default function RegulationsMinor(props) {
   return (
     <div>
       <div>
+      <div className="text-xl p-3">Laws concerning Minors</div>
+            <ul className=" p-3 list-disc">
         {/* Is the data present? */}
         {(gestationalRegulations.banned_after_weeks_since_LMP === undefined) ?
           // Yes, it's undefined (not present) - there are no restrictions
@@ -34,6 +36,7 @@ export default function RegulationsMinor(props) {
 
             }</div>)
         }
+        </ul>
       </div>
     </div>)
 }
