@@ -1,5 +1,14 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Product, Category, Order } = require("../models");
+const {
+  User,
+  Product,
+  Category,
+  Order,
+  StateGestational,
+  StateInsurance,
+  StateMinor,
+  StateWaitingPeriod,
+} = require("../models");
 const { signToken } = require("../utils/auth");
 require("dotenv").config({ path: "./.env" });
 const stripe = require("stripe")(process.env.SECRET_KEY);
@@ -88,6 +97,18 @@ const resolvers = {
       });
 
       return { session: session.id };
+    },
+    stateminor: async () => {
+      return await StateMinor.find();
+    },
+    stategestational: async () => {
+      return await StateGestational.find();
+    },
+    statewaitingperiod: async () => {
+      return await StateWaitingPeriod.find();
+    },
+    stateinsurance: async () => {
+      return await StateInsurance.find();
     },
   },
   Mutation: {

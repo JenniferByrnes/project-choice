@@ -5,6 +5,7 @@ const Order = require("./Order");
 const StateMinor = require("./StateMinor");
 const StateGestational = require("./StateGestation");
 const StateInsurance = require("./StateInsurance");
+const StateWaitingPeriod = require("./StateWaitingPeriod");
 
 module.exports = {
   User,
@@ -14,4 +15,5 @@ module.exports = {
   StateMinor,
   StateGestational,
   StateInsurance,
+  StateWaitingPeriod,
 };
