@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import RegulationsGest from "../../components/RegulationsGest";
 import RegulationsMinor from "../../components/RegulationsMinor";
 import RegulationsWait from "../../components/RegulationsWait";
-import RegulationsMedicaid from "../../components/RegulationsMedicaid";
+import RegulationsInsurance from "../../components/RegulationsInsurance";
 
 
 export default function Policies() {
@@ -52,39 +52,17 @@ export default function Policies() {
         <div className="pb-3 grid grid-cols-2 auto-cols-max gap-x-4 gap-y-8">
           <div className="p-3 shadow-md shadow-pcTan group container justify-center items-center mx-auto border-8 border-double border-pcTan">
             <div className="p-3 text-center underline ">Restrictions</div>
-            <div className="p-3 underline ">Laws based on gestation</div>
-            <ul className=" p-3 list-disc">
+ 
               <RegulationsGest stateUS={state}></RegulationsGest>
-              <RegulationsMinor stateUS={state}></RegulationsMinor>
-              <RegulationsMedicaid stateUS={state}></RegulationsMedicaid>
               <RegulationsWait stateUS={state}></RegulationsWait>
+              <RegulationsMinor stateUS={state}></RegulationsMinor>
+              <RegulationsInsurance stateUS={state}></RegulationsInsurance>
+              
 
               <br /><br /><br />
-              <li>Colorado law limits public funding for abortion.</li>
-              <br />
-              <li>
-                The state generally requires that parents or legal guardians be
-                notified about a minor’s abortion
-              </li>
-              <br />
-              <li>
-                Alternatively, a judge can approve a minor’s petition without
-                parental notification.
-              </li>
-              <br />
-              <li>
-                Colorado law requires abortion providers to submit reports to the
-                state.
-              </li>
-              <br />
-              <li>
-                On November 3, 2020, voters rejected a ballot initiative that
-                would have prohibited abortion after 22 weeks
-              </li>
-              <br />
-              <li>In 2022, Colorado enacted a statutory protection for abortion as a fundamental right.</li>
-              <br />
-            </ul>
+             
+             
+    
           </div>
 
           <div className="p-3 shadow-md shadow-pcTan group container justify-center text-left items-center mx-auto border-8 border-double border-pcTan">

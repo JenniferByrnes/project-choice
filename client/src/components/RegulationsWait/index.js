@@ -5,13 +5,19 @@ export default function RegulationsWait(props) {
   //const gestationalRegulations = { "banned_after_weeks_since_LMP": 0, "exception_life": false }
   //const gestationalRegulations = { "banned_after_weeks_since_LMP": 15, "exception_life": true }
   const waitingPeriodRegulations = { "waiting_period_hours": 24, "counseling_visits": 1 }
-
+  const regulations= {
+    waiting_period_hours: 24,
+    counseling_waived_condition: 'The ultrasound must take place at least 24 hours before the abortion unless the patient lives more than 100 miles from an abortion provider or if the pregnancy is the result of rape or incest or if the fetus has a lethal anomaly.',
+    counseling_visits: 2
+  }
   
   const gestationalRegulations = { "banned_after_weeks_since_LMP": 99, "exception_life": true }
 
   return (
     <div>
       <div>
+      <div className="text-xl p-3">Waiting Periods</div>
+            <ul className=" p-3 list-disc">
         {/* Is the data present? */}
         {(gestationalRegulations.banned_after_weeks_since_LMP === undefined) ?
           // Yes, it's undefined (not present) - there are no restrictions
@@ -34,6 +40,7 @@ export default function RegulationsWait(props) {
 
             }</div>)
         }
+        </ul>
       </div>
     </div>)
 }
