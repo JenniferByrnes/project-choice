@@ -51,49 +51,20 @@ export default function Policies() {
 
         <div className="pb-3 grid grid-cols-2 auto-cols-max gap-x-4 gap-y-8">
           <div className="p-3 shadow-md shadow-pcTan group container justify-center items-center mx-auto border-8 border-double border-pcTan">
-            <div className="p-3 text-center underline ">Restrictions</div>
+            <div className="p-3 text-center text-2xl underline ">Restrictions</div>
  
               <RegulationsGest stateUS={state}></RegulationsGest>
-              <RegulationsWait stateUS={state}></RegulationsWait>
               <RegulationsMinor stateUS={state}></RegulationsMinor>
-              <RegulationsInsurance stateUS={state}></RegulationsInsurance>
-              
 
-              <br /><br /><br />
-             
-             
-    
           </div>
 
           <div className="p-3 shadow-md shadow-pcTan group container justify-center text-left items-center mx-auto border-8 border-double border-pcTan">
             <div className="p-3">
-              <div className="pb-3 text-center underline">Clinics</div>
-              <ul className="list-disc">
-                <li className="p-2">
-                  Planned Parenthood of the Rocky Mountains, Inc. Denver, CO
-                  http://pprm.org (303) 321-2458
-                </li>
-                <li className="p-2">
-                  Comprehensive Women's Health Center Denver, CO
-                  http://cwhccolorado.com (303) 724-8576
-                </li>
-                <li className="p-2">
-                  Boulder Abortion Clinic Boulder, CO http://drhern.com (303)
-                  447-1361
-                </li>
-                <li className="p-2">
-                  Planned Parenthood of the Rocky Mountains, Inc. Fort Collins, CO
-                  http://pprm.org (970) 493-0281
-                </li>
-                <li className="p-2">
-                  Planned Parenthood of the Rocky Mountains, Inc. Littleton, CO
-                  http://pprm.org (303) 798-0963
-                </li>
-                <li className="p-2">
-                  Healthy Futures, P.C. Englewood, CO
-                  http://healthyfuturesforwomen.com (303) 991-7700
-                </li>
-              </ul>
+              <div className="pb-3 text-center text-2xl underline">Restrictions</div>
+
+              <RegulationsWait stateUS={state}></RegulationsWait>
+              <RegulationsInsurance stateUS={state}></RegulationsInsurance>
+
             </div>
           </div>
         </div>
