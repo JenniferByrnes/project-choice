@@ -1,45 +1,101 @@
 export default function RegulationsWait(props) {
 
   //Test cases
-  //const gestationalRegulations = {}
-  //const gestationalRegulations = { "banned_after_weeks_since_LMP": 0, "exception_life": false }
-  //const gestationalRegulations = { "banned_after_weeks_since_LMP": 15, "exception_life": true }
-  const waitingPeriodRegulations = { "waiting_period_hours": 24, "counseling_visits": 1 }
-  const regulations= {
-    waiting_period_hours: 24,
-    counseling_waived_condition: 'The ultrasound must take place at least 24 hours before the abortion unless the patient lives more than 100 miles from an abortion provider or if the pregnancy is the result of rape or incest or if the fetus has a lethal anomaly.',
-    counseling_visits: 2
+  const waitingPeriodRegulations = {}
+  //const waitingPeriodRegulations = { "waiting_period_hours": 24, "counseling_visits": 1 }
+  //const waitingPeriodRegulations = { waiting_period_hours: 24, waiting_period_notes: 'The ultrasound must take place at least 24 hours before the abortion unless the patient lives more than 100 miles from an abortion provider or if the pregnancy is the result of rape or incest or if the fetus has a lethal anomaly.', counseling_visits: 2 }
+
+  // Check exceptionHealth
+  function exceptionHealth() {
+    return (
+      <div>
+        {(waitingPeriodRegulations.exception_health === undefined) ?
+          // Yes, it's undefined (not present) - no data available
+          (<></>) :
+          // data is present
+
+          <li>The counseling requirement can be waived under certain conditions: {waitingPeriodRegulations.exception_health} </li>
+
+        }
+      </div>
+    )
   }
-  
-  const gestationalRegulations = { "banned_after_weeks_since_LMP": 99, "exception_life": true }
+
+  function waitingPeriodHours() {
+    return (
+      <div>
+        {(waitingPeriodRegulations.waiting_period_hours === undefined) ?
+          // Yes, it's undefined (not present) - no data available
+          (<li>{props.stateUS} does not have a mandatory waiting period.</li>) :
+          // data is present
+          <>
+            <li>{props.stateUS} requires a {waitingPeriodRegulations.waiting_period_hours} between receiving state mandated abortion counseling and obtaining an abortion. </li>
+            <li>Note that all states waive mandatory waiting period requirements in a medical emergency or when the woman's life or health is threatened. </li>
+          </>
+        }
+      </div>
+    )
+  }
+  function waitingPeriodNotes() {
+    return (
+      <div>
+        {(waitingPeriodRegulations.waiting_period_notes === undefined) ?
+          // Yes, it's undefined (not present) - no data available
+          (<></>) :
+          // data is present
+
+          <li>Special notes about waiting periods for {props.stateUS}: {waitingPeriodRegulations.waiting_period_notes} </li>
+
+        }
+      </div>
+    )
+  }
+
+  // Check the data in the "exception_rape_or_incest field"
+  function counselingVisits() {
+    return (
+      <div>
+        {(waitingPeriodRegulations.counseling_visits === undefined) ?
+          // It's undefined (not present)
+          (<li>No counseling visits are required by the state.</li>) :
+          // data is present
+          (<div>
+            <div>
+              {(() => {
+                switch (waitingPeriodRegulations.counseling_visits) {
+                  case 1:
+                    return <li>Counseling is required by the state.</li>
+                  case 2:
+                    return <li>Abortion counseling or ultrasound must be obtained at the facility before the waiting period begins, requiring two trips to the clinic.</li>
+                  default:
+                    return <li>No counseling data is available.</li>
+                }
+              })()}
+            </div>
+          </div>)
+        }
+      </div>
+    )
+  }
 
   return (
     <div>
       <div>
-      <div className="text-xl p-3">Waiting Periods</div>
-            <ul className=" p-3 list-disc">
-        {/* Is the data present? */}
-        {(gestationalRegulations.banned_after_weeks_since_LMP === undefined) ?
-          // Yes, it's undefined (not present) - there are no restrictions
-          (<li>{props.stateUS} has no gestational laws limiting abortions.</li>) :
+        <div className="text-xl p-3">Laws about Waiting Periods</div>
+        <ul className=" p-3 list-disc">
 
-          (<div>
-            {/* Is it 99 weeks (no limit)? */}
-            {(gestationalRegulations.banned_after_weeks_since_LMP === 99) ?
-              // Yes, it's 99 - no time limit
-              (<li>{props.stateUS} has no gestation time limit concerning abortions.</li>) :
-              // There's a time time limit
-              (<div>
-                {(gestationalRegulations.banned_after_weeks_since_LMP === 0) ?
-                  // Yes, it's 0
-                  (<li>{props.stateUS} does not allow abortions for any gestational age.</li>) :
-                  // There's a time time limit
-                  (<li>{props.stateUS} allows abortions up to {gestationalRegulations.banned_after_weeks_since_LMP} weeks.</li>)
-                }
-              </div>)
+          {/* Check for waiting period hours requirement*/}
+          {waitingPeriodHours()}
 
-            }</div>)
-        }
+          {/* Check for required counseling visits() */}
+          {counselingVisits()}
+
+          {/* Check exception_health */}
+          {exceptionHealth()}
+
+          {/* Check waitingPeriodNotes() */}
+          {waitingPeriodNotes()}
+
         </ul>
       </div>
     </div>)
