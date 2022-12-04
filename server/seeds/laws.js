@@ -54,7 +54,10 @@ function insuranceApi() {
     .then((res) => {
       for (const state in res) {
         // console.log({ [state]: res[state] });
-        insurance_coverage.push({ state: state, regulations: res[state] });
+        insurance_coverage.push({
+          state: state,
+          insuranceRegulations: res[state],
+        });
       }
 
       return insurance_coverage;
