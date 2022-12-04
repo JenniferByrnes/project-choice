@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 // process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/projectchoice",
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/project-choice",
+  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/project-choicess",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,

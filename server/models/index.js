@@ -4,6 +4,7 @@ const Category = require("./Category");
 const Order = require("./Order");
 const StateMinor = require("./StateMinor");
 const StateGestational = require("./StateGestation");
+const StateInsurance = require("./StateInsurance");
 
 module.exports = {
   User,
@@ -12,4 +13,5 @@ module.exports = {
   Order,
   StateMinor,
   StateGestational,
+  StateInsurance,
 };
