@@ -45,6 +45,10 @@ const typeDefs = gql`
   type StateGestational {
     _id: ID
     state: String
+    gestationalRegulations: [GestationalRegulations]
+  }
+
+  type GestationalRegulations {
     banned_after_weeks_since_LMP: Int
     exception_life: Boolean
     exception_health: String
@@ -53,7 +57,12 @@ const typeDefs = gql`
   }
 
   type StateWaitingPeriod {
+    _id: ID
     state: String
+    waitingPeriodRegulations: [WaitingPeriodRegulations]
+  }
+
+  type WaitingPeriodRegulations {
     waiting_period_hours: Int
     counseling_visits: Int
     exception_health: String
@@ -61,7 +70,12 @@ const typeDefs = gql`
   }
 
   type StateInsurance {
+    _id: ID
     state: String!
+    insuranceRegulations: [InsuranceRegulations]
+  }
+
+  type InsuranceRegulations {
     requires_coverage: Boolean
     private_coverage_no_restriction: Boolean
     private_exception_life: Boolean
@@ -96,9 +110,9 @@ const typeDefs = gql`
     order(_id: ID!): Order
     checkout(products: [ID]!): Checkout
     minorRegs(state: String!): StateMinor
-    #stategestational: [StateGestational]
-    #statewaitingperiod: [StateWaitingPeriod]
-    #stateinsurance: [StateInsurance]
+    gestationRegs(state: String!): StateGestational
+    waitingRegs(state: String!): StateWaitingPeriod
+    insuranceRegs(state: String!): StateInsurance
   }
 
   type Mutation {

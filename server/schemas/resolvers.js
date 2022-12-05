@@ -108,15 +108,33 @@ const resolvers = {
         console.error({ message: "no data found" });
       }
     },
-    // stategestational: async () => {
-    //   return await StateGestational.find();
-    // },
-    // statewaitingperiod: async () => {
-    //   return await StateWaitingPeriod.find();
-    // },
-    // stateinsurance: async () => {
-    //   return await StateInsurance.find();
-    // },
+    gestationRegs: async (parent, { state }) => {
+      try {
+        const stateData = await StateGestational.findOne({ state });
+
+        return stateData;
+      } catch (err) {
+        console.error({ message: "no data found" });
+      }
+    },
+    waitingRegs: async (parent, { state }) => {
+      try {
+        const stateData = await StateWaitingPeriod.findOne({ state });
+
+        return stateData;
+      } catch (err) {
+        console.error({ message: "no data found" });
+      }
+    },
+    insuranceRegs: async (parent, { state }) => {
+      try {
+        const stateData = await StateInsurance.findOne({ state });
+
+        return stateData;
+      } catch (err) {
+        console.error({ message: "no data found" });
+      }
+    },
   },
   Mutation: {
     addUser: async (parent, args) => {
