@@ -3,7 +3,7 @@ import mainLogo from "../../assets/mainLogo/fullLogo.png";
 
 
 export default function Homepage() {
-  const [state, setState] = useState("AL");
+  const [state, setState] = useState("Alabama");
 
   function handleSelect(e) {
     setState(e.target.value);
