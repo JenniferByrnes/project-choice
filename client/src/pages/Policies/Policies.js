@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useQuery } from '@apollo/client';
+import { QUERY_POLICY } from '../../utils/queries';
+import { idbPromise } from '../../utils/helpers';
+import spinner from '../../assets/images/spinner.gif';
 import RegulationsGest from "../../components/RegulationsGest";
 import RegulationsMinor from "../../components/RegulationsMinor";
 import RegulationsWait from "../../components/RegulationsWait";
@@ -14,6 +18,8 @@ export default function Policies() {
       token: "O+Pe+i+97g5AJTkg",
     },
   };
+  const { loading, data } = useQuery(QUERY_POLICY);
+  console.log("data=", data)
 
   // Currently not used - non functioning.  API call must be back end or we use our own DB to populate these fields
   useEffect(() => {
