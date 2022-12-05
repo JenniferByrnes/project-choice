@@ -16,6 +16,22 @@ export const QUERY_PRODUCTS = gql`
   }
 `;
 
+export const QUERY_POLICY = gql`
+  query getPolicy($state: state) {
+    products(category: $category) {
+      _id
+      name
+      description
+      price
+      quantity
+      image
+      category {
+        _id
+      }
+    }
+  }
+`;
+
 export const QUERY_CHECKOUT = gql`
   query getCheckout($products: [ID]!) {
     checkout(products: $products) {

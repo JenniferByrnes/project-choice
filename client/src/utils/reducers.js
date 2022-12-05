@@ -29,7 +29,7 @@ export const reducers = (state = initialState, action) => {
     case ADD_TO_CART:
       return {
         ...state,
-        cartOpen: true,
+        cartOpen: false,
         cart: [...state.cart, action.product],
       };
 
@@ -42,7 +42,7 @@ export const reducers = (state = initialState, action) => {
     case UPDATE_CART_QUANTITY:
       return {
         ...state,
-        cartOpen: true,
+        cartOpen: false,
         cart: state.cart.map(product => {
           if (action._id === product._id) {
             product.purchaseQuantity = action.purchaseQuantity
