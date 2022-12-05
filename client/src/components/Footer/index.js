@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <footer className="flex flex-col md:flex-row bg-stone-200 text-stone-600">
+    <footer className="">
       {/* Container */}
-      <div className="container flex flex-col justify-between items-center md:items-start md:flex-row pt-1 px-2 lg:px-8 md:py-4 md:space-x-4 mx-auto">
+      <div className="flex flex-col w-full justify-between items-center md:items-start md:flex-row pt-1 px-2 lg:px-8 md:py-4 md:space-x-4 mx-auto bg-stone-200 text-stone-600">
         {/* Footer Flex Container */}
         <div className="flex flex-col justify-center max-w-fit md:flex-row md:space-y-0 ">
           {/* Resources Container */}

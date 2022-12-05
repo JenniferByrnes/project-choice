@@ -1,8 +1,16 @@
+import { QUERY_MINOR } from '../../utils/queries';
+import { useQuery } from '@apollo/client';
+
 export default function RegulationsMinor(props) {
 
-  //Test cases
-  const minorRegulations = { "parental_consent_required": true, "judicial_bypass_available": true, "below_age": 18, "parents_required": 1 }
-  //const minorRegulations = {}
+  const { loading, error, data } = useQuery(QUERY_MINOR, { variables: { state: props.stateUS } });
+
+  if (loading) return 'Loading...';
+  if (error) return `Error! ${error.message}`;
+  
+  const minorRegulations =  data.minorRegs.minorRegulations[0] 
+  console.log("JKBminorRegulations=")
+  console.log(minorRegulations)
 
   // Check the data in the "banned_after_weeks_since_LMP field"
   function parentsRequired() {

@@ -1,13 +1,20 @@
-export default function RegulationsWait(props) {
+import { QUERY_WAITING } from '../../utils/queries';
+import { useQuery } from '@apollo/client';
 
-  //Test cases
-  const waitingPeriodRegulations = {}
-  //const waitingPeriodRegulations = { "waiting_period_hours": 24, "counseling_visits": 1 }
-  //const waitingPeriodRegulations = { waiting_period_hours: 24, waiting_period_notes: 'The ultrasound must take place at least 24 hours before the abortion unless the patient lives more than 100 miles from an abortion provider or if the pregnancy is the result of rape or incest or if the fetus has a lethal anomaly.', counseling_visits: 2 }
+export default function RegulationsMinor(props) {
+
+  const { loading, error, data } = useQuery(QUERY_WAITING, { variables: { state: props.stateUS } });
+
+  if (loading) return 'Loading...';
+  if (error) return `Error! ${error.message}`;
+  
+  const waitingPeriodRegulations =  data.waitingRegs.waitingPeriodRegulations[0] 
+  console.log("JKBwaitingPeriodRegulations=")
+  console.log(waitingPeriodRegulations)
 
   // Check exceptionHealth
   function exceptionHealth() {
-    if (waitingPeriodRegulations.exception_health === undefined)
+    if (!waitingPeriodRegulations.exception_health)
       return;
     else
       return (
@@ -16,7 +23,7 @@ export default function RegulationsWait(props) {
   }
 
   function waitingPeriodHours() {
-    if (waitingPeriodRegulations.waiting_period_hours === undefined)
+    if (!waitingPeriodRegulations.waiting_period_hours)
       return <li>{props.stateUS} does not have a mandatory waiting period.</li>;
     else
       return <>
@@ -27,7 +34,7 @@ export default function RegulationsWait(props) {
   }
 
   function waitingPeriodNotes() {
-    if (waitingPeriodRegulations.waiting_period_notes === undefined)
+    if (!waitingPeriodRegulations.waiting_period_notes)
       return;
     else
       return <li>Special notes about waiting periods for {props.stateUS}: {waitingPeriodRegulations.waiting_period_notes} </li>
@@ -35,8 +42,8 @@ export default function RegulationsWait(props) {
 
   // Check the data in the "exception_rape_or_incest field"
   function counselingVisits() {
-    if (waitingPeriodRegulations.counseling_visits === undefined)
-      return <li>No counseling visits are required by the state.</li>
+    if (!waitingPeriodRegulations.counseling_visits)
+      return
     else
       switch (waitingPeriodRegulations.counseling_visits) {
         case 1:
