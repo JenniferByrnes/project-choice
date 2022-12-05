@@ -29,7 +29,12 @@ const typeDefs = gql`
   }
 
   type StateMinor {
+    _id: ID
     state: String
+    minorRegulations: [MinorRegulations]
+  }
+
+  type MinorRegulations {
     parental_consent_required: Boolean
     judicial_bypass_available: Boolean
     below_age: Int
@@ -38,6 +43,7 @@ const typeDefs = gql`
   }
 
   type StateGestational {
+    _id: ID
     state: String
     banned_after_weeks_since_LMP: Int
     exception_life: Boolean
@@ -55,7 +61,7 @@ const typeDefs = gql`
   }
 
   type StateInsurance {
-    state: String
+    state: String!
     requires_coverage: Boolean
     private_coverage_no_restriction: Boolean
     private_exception_life: Boolean
@@ -89,10 +95,10 @@ const typeDefs = gql`
     user: User
     order(_id: ID!): Order
     checkout(products: [ID]!): Checkout
-    stateminor: [StateMinor]
-    stategestational: [StateGestational]
-    statewaitingperiod: [StateWaitingPeriod]
-    stateinsurance: [StateInsurance]
+    minorRegs(state: String!): StateMinor
+    #stategestational: [StateGestational]
+    #statewaitingperiod: [StateWaitingPeriod]
+    #stateinsurance: [StateInsurance]
   }
 
   type Mutation {

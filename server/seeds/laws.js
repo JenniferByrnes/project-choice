@@ -76,7 +76,10 @@ function waitinperiodsgApi() {
     .then((res) => {
       for (const state in res) {
         // console.log({ [state]: res[state] });
-        waiting_periods.push({ state: state, regulations: res[state] });
+        waiting_periods.push({
+          state: state,
+          waitingPeriodRegulations: res[state],
+        });
       }
 
       return waiting_periods;

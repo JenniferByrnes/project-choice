@@ -98,18 +98,25 @@ const resolvers = {
 
       return { session: session.id };
     },
-    stateminor: async () => {
-      return await StateMinor.find();
+
+    minorRegs: async (parent, { state }) => {
+      try {
+        const stateData = await StateMinor.findOne({ state });
+
+        return stateData;
+      } catch (err) {
+        console.error({ message: "no data found" });
+      }
     },
-    stategestational: async () => {
-      return await StateGestational.find();
-    },
-    statewaitingperiod: async () => {
-      return await StateWaitingPeriod.find();
-    },
-    stateinsurance: async () => {
-      return await StateInsurance.find();
-    },
+    // stategestational: async () => {
+    //   return await StateGestational.find();
+    // },
+    // statewaitingperiod: async () => {
+    //   return await StateWaitingPeriod.find();
+    // },
+    // stateinsurance: async () => {
+    //   return await StateInsurance.find();
+    // },
   },
   Mutation: {
     addUser: async (parent, args) => {
