@@ -1,5 +1,10 @@
 const db = require("../config/connection");
-const { StateMinor, StateGestational, StateInsurance } = require("../models");
+const {
+  StateMinor,
+  StateGestational,
+  StateInsurance,
+  StateWaitingPeriod,
+} = require("../models");
 const fs = require("fs");
 const util = require("util");
 
@@ -7,6 +12,7 @@ db.once("open", async () => {
   let minorLawData;
   let gestationalLawData;
   let insuranceLawData;
+  let waitingLawData;
 
   const minorLaws = fs.readFile("./seeds/minor.json", "utf-8", (error, data) =>
     error ? console.log(error) : (minorLawData = JSON.parse(data))
@@ -26,12 +32,12 @@ db.once("open", async () => {
       error ? console.log(error) : (insuranceLawData = JSON.parse(data))
   );
 
-  // const waitingperiodsLaws = await fs.readFile(
-  //   "./seeds/waitingperiods.json",
-  //   "utf-8",
-  //   (error, data) =>
-  //     error ? console.log(error) : console.log(JSON.parse(data))
-  // );
+  const waitingperiodsLaws = await fs.readFile(
+    "./seeds/waitingperiods.json",
+    "utf-8",
+    (error, data) =>
+      error ? console.log(error) : (waitingLawData = JSON.parse(data))
+  );
 
   await StateMinor.deleteMany();
 
@@ -45,10 +51,9 @@ db.once("open", async () => {
 
   await StateInsurance.insertMany(insuranceLawData);
 
-  console.log(StateInsurance);
-  // await Regulations.deleteMany();
+  await StateWaitingPeriod.deleteMany();
 
-  // await Regulations.insertMany(waitingperiodsLaws);
+  await StateWaitingPeriod.insertMany(waitingLawData);
 
   process.exit();
 });

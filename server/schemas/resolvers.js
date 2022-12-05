@@ -1,5 +1,14 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Product, Category, Order } = require("../models");
+const {
+  User,
+  Product,
+  Category,
+  Order,
+  StateGestational,
+  StateInsurance,
+  StateMinor,
+  StateWaitingPeriod,
+} = require("../models");
 const { signToken } = require("../utils/auth");
 require("dotenv").config({ path: "./.env" });
 const stripe = require("stripe")(process.env.SECRET_KEY);
@@ -88,6 +97,43 @@ const resolvers = {
       });
 
       return { session: session.id };
+    },
+
+    minorRegs: async (parent, { state }) => {
+      try {
+        const stateData = await StateMinor.findOne({ state });
+
+        return stateData;
+      } catch (err) {
+        console.error({ message: "no data found" });
+      }
+    },
+    gestationRegs: async (parent, { state }) => {
+      try {
+        const stateData = await StateGestational.findOne({ state });
+
+        return stateData;
+      } catch (err) {
+        console.error({ message: "no data found" });
+      }
+    },
+    waitingRegs: async (parent, { state }) => {
+      try {
+        const stateData = await StateWaitingPeriod.findOne({ state });
+
+        return stateData;
+      } catch (err) {
+        console.error({ message: "no data found" });
+      }
+    },
+    insuranceRegs: async (parent, { state }) => {
+      try {
+        const stateData = await StateInsurance.findOne({ state });
+
+        return stateData;
+      } catch (err) {
+        console.error({ message: "no data found" });
+      }
     },
   },
   Mutation: {
