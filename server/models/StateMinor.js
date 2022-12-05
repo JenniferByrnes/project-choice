@@ -14,3 +14,9 @@ const stateMinorSchema = new Schema({
 const StateMinor = mongoose.model("StateMinor", stateMinorSchema);
 
 module.exports = StateMinor;
+
+// parental_consent_required: Boolean
+// judicial_bypass_available: Boolean
+// below_age: Int
+// parents_required: Int
+// allow_minor_to_consent: Boolean

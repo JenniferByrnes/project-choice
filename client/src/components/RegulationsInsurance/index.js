@@ -1,10 +1,16 @@
+import { QUERY_INSURANCE } from '../../utils/queries';
+import { useQuery } from '@apollo/client';
+
 export default function RegulationsInsurance(props) {
 
-  //Test cases
-  //const insuranceRegulations = {}
-  //const insuranceRegulations = { "medicaid_exception_rape_or_incest": true, "medicaid_exception_life": true, "exchange_exception_life": true, "private_exception_life": true }
-  const insuranceRegulations = { medicaid_exception_health: 'Major Bodily Function', medicaid_exception_rape_or_incest: true, medicaid_exception_life: true, exchange_coverage_no_restrictions: true, private_coverage_no_restrictions: true, medicaid_exception_fetal: 'Serious fetal anomaly' }
+  const { loading, error, data } = useQuery(QUERY_INSURANCE, { variables: { state: props.stateUS } });
 
+  if (loading) return 'Loading...';
+  if (error) return `Error! ${error.message}`;
+  
+  const insuranceRegulations =  data.insuranceRegs.insuranceRegulations[0] 
+  console.log("JKBinsuranceRegulations=")
+  console.log(insuranceRegulations)
 
   // Check the data in the "banned_after_weeks_since_LMP field"
   function exceptionLife() {
@@ -16,15 +22,16 @@ export default function RegulationsInsurance(props) {
 
   // Check the text data in the "banned_after_weeks_since_LMP field"
   function exceptionHealth() {
-    if (insuranceRegulations.medicaid_exception_health !== null)
-      return (
+    if (!insuranceRegulations.medicaid_exception_health)
+      return;
+      else (
         <li>Medicaid coverage may be allowed for the following medical issue: {insuranceRegulations.medicaid_exception_health}.</li>
       )
   }
 
   // Check the data in the "exception_rape_or_incest field"
   function exceptionRape() {
-    if (insuranceRegulations.medicaid_exception_rape_or_incest === undefined)
+    if (!insuranceRegulations.medicaid_exception_rape_or_incest)
       return;
     else
       switch (insuranceRegulations.medicaid_exception_rape_or_incest) {
