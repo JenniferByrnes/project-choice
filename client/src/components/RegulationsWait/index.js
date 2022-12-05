@@ -43,7 +43,7 @@ export default function RegulationsMinor(props) {
   // Check the data in the "exception_rape_or_incest field"
   function counselingVisits() {
     if (!waitingPeriodRegulations.counseling_visits)
-      return <li>No counseling visits is available.</li>
+      return
     else
       switch (waitingPeriodRegulations.counseling_visits) {
         case 1:
