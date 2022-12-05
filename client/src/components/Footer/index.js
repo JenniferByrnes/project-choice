@@ -8,9 +8,9 @@ const Footer = () => {
           {/* Resources Container */}
           <div className='flex flex-col md:flex-row md:space-x-8 border-b border-b-black md:border-b-transparent'>
             {/* Resources Header */}
-            <h2 className="text-center font-semibold md:items-start">Resource Links</h2>
+            <h2 className="text-center font-bold md:items-start">Resource Links</h2>
             {/* Possible Future Release */}
-            <h2 className="hidden mb-6 text-sm font-semibold uppercase ">Legal</h2>
+            <h2 className="hidden mb-6 font-bold uppercase ">Legal</h2>
             {/* Menu Container */}
             <ul className="flex flex-col items-center md:items-start">
               <li>
@@ -46,7 +46,7 @@ const Footer = () => {
             </a>
           </div>
           {/* Copywrite */}
-          <span className="font-extralight md:text-base text-center md:text-start">© 2022 <a href="https://github.com/JenniferByrnes/project-choice" className="hover:underline ">Projects Choice</a>. All Rights Reserved.
+          <span className=" italic font-light md:text-base text-center md:text-start">© 2022 <a href="https://github.com/JenniferByrnes/project-choice" className="hover:underline">Projects Choice</a>. All Rights Reserved.
           </span>
         </div>
       </div>
