@@ -1,6 +1,5 @@
-import { useState } from 'react';
+import { useState } from "react";
 import mainLogo from "../../assets/mainLogo/fullLogo.png";
-
 
 export default function Homepage() {
   const [state, setState] = useState("Alabama");
@@ -41,7 +40,8 @@ export default function Homepage() {
 
             <select
               id="period"
-              className="mt-1 block w-full rounded-md border-4 bg-white py-2 px-3 shadow-sm  sm:text-sm" onChange={handleSelect}
+              className="mt-1 block w-full rounded-md border-4 bg-white py-2 px-3 shadow-sm  sm:text-sm"
+              onChange={handleSelect}
             >
               <option value="Alabama">Alabama</option>
               <option value="Alaska">Alaska</option>
@@ -69,7 +69,7 @@ export default function Homepage() {
               <option value="Minnesota">Minnesota</option>
               <option value="Mississippi">Mississippi</option>
               <option value="Missouri">Missouri</option>
-              <option value="Montan">Montana</option>
+              <option value="Montana">Montana</option>
               <option value="Nebraska">Nebraska</option>
               <option value="Nevada">Nevada</option>
               <option value="New Hampshire">New Hampshire</option>
@@ -110,17 +110,20 @@ export default function Homepage() {
               ABORTION IS HEALTH CARE!
             </div>
             At Project Choice we believe in body autonomy and the woman's
-            absolute right to chose. The last thing that should stand in the
-            way is lack of information, and that is the reason for this project.
+            absolute right to chose. The last thing that should stand in the way
+            is lack of information, and that is the reason for this project.
             <br />
             <br />
-            Simply select your state to see policies in your area to include legality, gestational limits, waiting periods, and special rules for minors.  We have a shop with branded merchandise whose proceeds benefit Planned Parenthood.  At the footer are links to organizations that can help.
+            Simply select your state to see policies in your area to include
+            legality, gestational limits, waiting periods, and special rules for
+            minors. We have a shop with branded merchandise whose proceeds
+            benefit Planned Parenthood. At the footer are links to organizations
+            that can help.
             <br />
             <br />
             If you have any suggestions for us, please use our Contact Form!
           </div>
         </div>
-
       </div>
       {/* start form code */}
     </section>

@@ -393,5 +393,25 @@
   {
     "state": "Alaska",
     "gestationalRegulations": {}
+  },
+  {
+    "state": "Colorado",
+    "gestationalRegulations": {}
+  },
+  {
+    "state": "New Jersey",
+    "gestationalRegulations": {}
+  },
+  {
+    "state": "New Mexico",
+    "gestationalRegulations": {}
+  },
+  {
+    "state": "Oregon",
+    "gestationalRegulations": {}
+  },
+  {
+    "state": "Vermont",
+    "gestationalRegulations": {}
   }
 ]
