@@ -13,10 +13,18 @@ export default function RegulationsInsurance(props) {
   console.log(insuranceRegulations)
 
   // Check the data in the "banned_after_weeks_since_LMP field"
-  function exceptionLife() {
-    if (insuranceRegulations.medicaid_exception_life === true)
-      return <li>Medicaid coverage is allowed if the abortion is necessary to save the pregnant person's life.</li>
+  function medicaidDecision() {
+    if (!insuranceRegulations.medicaid_coverage_provider_patient_decision)
+      return <li>Based on the Hyde amendment, states are required to use Medicaid funds to pay for abortion in cases of rape, of incest, or when the pregnant person's life is endangered</li>
+      else 
+      return <li>{props.stateUS} has a policy in place to use Medicaid funds to pay for a  "medically necessary" abortion.</li>
   }
+
+    // Check the data in the "banned_after_weeks_since_LMP field"
+    function exceptionLife() {
+      if (insuranceRegulations.medicaid_exception_life === true)
+        return <li>Medicaid coverage is allowed if the abortion is necessary to save the pregnant person's life.</li>
+    }
 
   // Check the text data in the "banned_after_weeks_since_LMP field"
   function exceptionHealth() {
@@ -58,6 +66,9 @@ export default function RegulationsInsurance(props) {
     <div>
       <div className="text-xl p-3">Laws governing insurance coverage</div>
       <ul className=" p-3 list-disc">
+
+        {/* Check Medicaid patient provider decision */}
+        {medicaidDecision()}
 
         {/* Check Medicaid exception_life */}
         {exceptionLife()}

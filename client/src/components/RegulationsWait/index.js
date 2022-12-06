@@ -9,8 +9,6 @@ export default function RegulationsMinor(props) {
   if (error) return `Error! ${error.message}`;
   
   const waitingPeriodRegulations =  data.waitingRegs.waitingPeriodRegulations[0] 
-  console.log("JKBwaitingPeriodRegulations=")
-  console.log(waitingPeriodRegulations)
 
   // Check exceptionHealth
   function exceptionHealth() {
@@ -27,7 +25,7 @@ export default function RegulationsMinor(props) {
       return <li>{props.stateUS} does not have a mandatory waiting period.</li>;
     else
       return <>
-        <li>{props.stateUS} requires a {waitingPeriodRegulations.waiting_period_hours} between receiving state mandated abortion counseling and obtaining an abortion. </li>
+        <li>{props.stateUS} requires {waitingPeriodRegulations.waiting_period_hours} hours between receiving state mandated abortion counseling and obtaining an abortion. </li>
         <li>Note that all states waive mandatory waiting period requirements in a medical emergency or when the woman's life or health is threatened. </li>
       </>
 
