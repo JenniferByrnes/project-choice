@@ -70,7 +70,7 @@ const Cart = () => {
   if (!state.cartOpen) {
     return (
       // this is "cart-closed"
-      <div className="absolute top-4 right-14 md:top-5 md:right-3">
+      <div className="absolute top-3 right-14 md:right-3">
         <div
           className="inline-block text-4xl duration-200 hover:rotate-12 cursor-default"
           role="img"
