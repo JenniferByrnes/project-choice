@@ -9,10 +9,10 @@ const Navbar = () => {
 
   return (
     <header className="w-full bg-stone-200 text-black">
-      <div className="container max-w-6xl mx-auto px-6 py-2">
+      <div className="container max-w-6xl mx-auto px-6 py-1">
 
         {/* Nav Menu */}
-        <ul className="hidden md:flex items-center justify-around py-4">
+        <ul className="hidden md:flex items-center justify-around py-2">
           <li className="hover:text-pcCoral hover:border-b hover:border-pcCoral">
             <Link to="/">Home</Link>
           </li>

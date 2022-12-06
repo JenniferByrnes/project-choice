@@ -10,10 +10,9 @@ export default function Homepage() {
   }
   return (
     <section>
-
       {/* Logo and optional divider line */}
       <div className="hidden md:block">
-        <div className="pb-10 pt-16 max-w-6xl mx-auto">
+        <div className="pt-16 pb-8 max-w-6xl mx-auto">
           <img
             className="mx-auto"
             src={mainLogo}
@@ -32,10 +31,10 @@ export default function Homepage() {
       </div>
 
       {/* Container for main content */}
-      <div className="container flex flex-col mx-auto p-6 lg:flex-row lg:mb-0">
+      <div className="container flex flex-col mx-auto p-5 lg:flex-row lg:mb-0">
         {/* Select your state */}
         <div className="overflow-hidden border-8 border-pcTan border-double sm:rounded-md justify-center items-center ">
-          <div className="bg-white px-4 py-5 sm:p-6 justify-center items-center">
+          <div className="bg-white px-4 pt-5 sm:p-2 justify-center items-center">
             <div className="font-extrabold text-center leading-10">
               To find the abortion regulations in your area select your State.
             </div>

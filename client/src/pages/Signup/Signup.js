@@ -33,7 +33,7 @@ export default function Signup() {
 
   return (
     // Card for signup
-    <div className="flex flex-col items-center justify-center px-6 py-8 pt-[60px] mx-auto md:h-screen lg:py-0 text-stone-800">
+    <section className="flex flex-col items-center justify-center px-6 py-8 pt-[60px] mx-auto md:h-screen lg:py-0 text-stone-800">
       <h1 className="flex items-center mb-6 text-3xl">
         Create Your Account
       </h1>
@@ -69,6 +69,6 @@ export default function Signup() {
               {/* Right Side */}
               <img src={image} alt="" className="w-[430px] hidden md:block" />
       </div>
-    </div>
+    </section>
   );
 }

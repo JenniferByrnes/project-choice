@@ -5,11 +5,11 @@ import Cart from '../../components/Cart';
 // Return Shop data - a category menu, full list of products, cart
 const Shop = () => {
   return (
-    <div >
+    <section >
       <CategoryMenu />
       <ProductList />
       <Cart />
-    </div>
+    </section>
   );
 };
 

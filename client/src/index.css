@@ -29,6 +29,15 @@
   src: local("JosefinSans"),
   url("./assets/fonts/Josefin_Sans/static/JosefinSans-LightItalic.ttf");
 }
+#root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+section {
+  flex: 1;
+}
 
 /* Form fields are used on the Contact, Login, and SignUp forms */
 .form-container {
