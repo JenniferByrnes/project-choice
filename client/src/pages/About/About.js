@@ -3,7 +3,7 @@ import Tile from "../../assets/posterTile/unite.png";
 
 export default function About() {
   return (
-    <div
+    <section
       className="container mx-auto p-6 text-stone-800"
     >
       <div className="md:mt-12 p-6 flex flex-col justify-center w-full">
@@ -61,6 +61,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

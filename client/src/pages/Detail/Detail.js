@@ -17,23 +17,12 @@ import {
 
 export default function Detail() {
   const { id } = useParams();
-  // const [currentProduct, setCurrentProduct] = useState({});
-  // const { loading, data } = useQuery(QUERY_PRODUCTS);
-  // const products = data?.products || [];
 
-  // useEffect(() => {
-  //   if (products.length) {
-  //     setCurrentProduct(products.find((product) => product._id === id));
-  //   }
-  // }, [products, id]);
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
 
-
   const [currentProduct, setCurrentProduct] = useState({})
-
   const { loading, data } = useQuery(QUERY_PRODUCTS);
-
   const { products, cart } = state;
 
   useEffect(() => {
@@ -98,26 +87,26 @@ export default function Detail() {
   };
 
   return (
-    <div>
+    <section>
       <Link to="/shop">← Back to Products</Link>
-      <div className='container flex flex-col w-fit mx-auto text-stone-800 justify-center items-center px-6 pt-4 py-4 md:py-8 sm:pt-[30px] '>
+      <div className='container flex flex-col w-fit mx-auto text-stone-800 px-6 md:py-8'>
 
         {currentProduct ? (
           // container to place image and text 
-          <div className="relative flex flex-col w-full mx-auto m-6 space-y-10 shadow-2xl rounded-2xl md:flex-row md:space-y-0 md:m-0 bg-gradient-to-r from-indigo-100 to-white">
+          <div className="relative flex flex-col w-full mx-auto m-6 items-center shadow-2xl rounded-2xl md:flex-row md:m-0 bg-gradient-to-r from-indigo-100 to-white">
             {/* Left Side */}
-            <div className="img-container pt-2 drop-shadow-2xl max-w-prose origin-bottom ...">
+            <div className="img-container md:pt-2 drop-shadow-2xl w-80 md:max-w-prose origin-bottom ...">
               <img className="drop-shadow-2xl"
                 src={`/images/${currentProduct.image}`}
                 alt={currentProduct.name}
               />
             </div>
             {/* Right Side */}
-            <div className="text-center md:text-left md:self-center px-4 py-3 ">
-              <h2 className="text-3xl">
-                {currentProduct.name}</h2>
-              <p className="text-lg py-2">{currentProduct.description}</p>
-              <h2 className="text-2xl py-2">
+            <div className="text-center md:text-left md:self-center px-4 py-1 md:py-3 ">
+              <strong className="text-2xl md:text-3xl">
+                {currentProduct.name}</strong>
+              <p className="text-base md:text-lg md:py-2">{currentProduct.description}</p>
+              <h2 className="text-xl md:text-2xl md:py-2">
                 <strong>Price: </strong>${currentProduct.price}
               </h2>
                 <div className="relative flex justify-center md:justify-start w-full ">
@@ -150,6 +139,6 @@ export default function Detail() {
         {loading ? <img src={spinner} alt="loading" /> : null}
         <Cart />
       </div>
-    </div>
+    </section>
   );
 }
