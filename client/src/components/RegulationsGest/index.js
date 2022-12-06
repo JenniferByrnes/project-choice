@@ -1,18 +1,13 @@
 import { QUERY_GESTATION } from '../../utils/queries';
-import { idbPromise } from '../../utils/helpers';
-import spinner from '../../assets/images/spinner.gif';
 import { useQuery } from '@apollo/client';
 
 export default function RegulationsGest(props) {
 
-  console.log("props.stateUS=", props.stateUS)
   const { loading, error, data } = useQuery(QUERY_GESTATION, { variables: { state: props.stateUS } });
 
   if (loading) return 'Loading...';
   if (error) return `Error! ${error.message}`;
 
-  console.log("JKBdata=")
-  console.log(data)
     //const gestationalRegulations = ((status === "success") ? data.gestationRegs.gestationalRegulations[0] : "")
   // if (data === null) {
   //   return <li>There is no data on this category for {props.stateUS}</li>
