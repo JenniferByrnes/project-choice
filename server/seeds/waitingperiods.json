@@ -1,1 +1,218 @@
-[{"state":"Kentucky","waitingPeriodRegulations":{"waiting_period_hours":24,"counseling_visits":2}},{"state":"Oklahoma","waitingPeriodRegulations":{"waiting_period_hours":72,"counseling_visits":1}},{"state":"Kansas","waitingPeriodRegulations":{"waiting_period_hours":24,"counseling_visits":1}},{"state":"Ohio","waitingPeriodRegulations":{"waiting_period_hours":24,"counseling_visits":2}},{"state":"Arizona","waitingPeriodRegulations":{"waiting_period_hours":24,"counseling_visits":2}},{"state":"Mississippi","waitingPeriodRegulations":{"waiting_period_hours":24,"counseling_visits":2}},{"state":"Tennessee","waitingPeriodRegulations":{"waiting_period_hours":48,"counseling_visits":2}},{"state":"Wisconsin","waitingPeriodRegulations":{"waiting_period_hours":24,"counseling_visits":2}},{"state":"Alabama","waitingPeriodRegulations":{"waiting_period_hours":48,"counseling_waived_condition":"In cases of ectopic pregnancy or severe fetal impairment.","counseling_visits":1}},{"state":"Missouri","waitingPeriodRegulations":{"waiting_period_hours":72,"counseling_visits":2}},{"state":"Idaho","waitingPeriodRegulations":{"waiting_period_hours":24,"counseling_visits":1}},{"state":"Virginia","waitingPeriodRegulations":{"Last Updated":"2020-07-06T15:57:47.000Z"}},{"state":"Pennsylvania","waitingPeriodRegulations":{"waiting_period_hours":24,"counseling_visits":1}},{"state":"Florida","waitingPeriodRegulations":{"waiting_period_hours":24,"counseling_visits":2,"Last Updated":"2022-04-04T14:57:11.000Z"}},{"state":"South Carolina","waitingPeriodRegulations":{"waiting_period_hours":24,"counseling_visits":1}},{"state":"Georgia","waitingPeriodRegulations":{"waiting_period_hours":24,"counseling_visits":1}},{"state":"Minnesota","waitingPeriodRegulations":{"Last Updated":"2022-07-11T21:19:45.000Z"}},{"state":"Indiana","waitingPeriodRegulations":{"waiting_period_hours":18,"counseling_visits":2}},{"state":"Utah","waitingPeriodRegulations":{"waiting_period_hours":72,"counseling_waived_condition":"If the pregnancy is the result of rape or incest or the patient is younger than 15.","counseling_visits":2}},{"state":"North Carolina","waitingPeriodRegulations":{"waiting_period_hours":72,"counseling_visits":1}},{"state":"Arkansas","waitingPeriodRegulations":{"waiting_period_hours":72,"counseling_visits":2,"Last Updated":"2019-11-13T12:13:26.000Z"}},{"state":"North Dakota","waitingPeriodRegulations":{"waiting_period_hours":24,"counseling_visits":1}},{"state":"Iowa","waitingPeriodRegulations":{"waiting_period_hours":24,"counseling_visits":1,"Last Updated":"2022-06-18T17:06:11.000Z"}},{"state":"Michigan","waitingPeriodRegulations":{"waiting_period_hours":24,"counseling_visits":1}},{"state":"Nebraska","waitingPeriodRegulations":{"waiting_period_hours":24,"counseling_visits":1}},{"state":"South Dakota","waitingPeriodRegulations":{"waiting_period_hours":72,"waiting_period_notes":"Weekends and holidays do not count towards the 72-hour waiting period.","counseling_visits":2}},{"state":"Louisiana","waitingPeriodRegulations":{"waiting_period_hours":72,"counseling_visits":2,"Last Updated":"2022-06-16T13:15:50.000Z"}},{"state":"Texas","waitingPeriodRegulations":{"waiting_period_hours":24,"counseling_waived_condition":"The ultrasound must take place at least 24 hours before the abortion unless the patient lives more than 100 miles from an abortion provider or if the pregnancy is the result of rape or incest or if the fetus has a lethal anomaly.","counseling_visits":2}},{"state":"Alaska","waitingPeriodRegulations":{"counseling_visits":1,"Last Updated":"2022-02-15T21:04:41.000Z"}},{"state":"West Virginia","waitingPeriodRegulations":{"waiting_period_hours":24,"counseling_visits":1}}]
+[
+  {
+    "state": "Kentucky",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 24,
+      "counseling_visits": 2
+    }
+  },
+  {
+    "state": "Oklahoma",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 72,
+      "counseling_visits": 1
+    }
+  },
+  {
+    "state": "Kansas",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 24,
+      "counseling_visits": 1
+    }
+  },
+  {
+    "state": "Ohio",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 24,
+      "counseling_visits": 2
+    }
+  },
+  {
+    "state": "Arizona",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 24,
+      "counseling_visits": 2
+    }
+  },
+  {
+    "state": "Mississippi",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 24,
+      "counseling_visits": 2
+    }
+  },
+  {
+    "state": "Tennessee",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 48,
+      "counseling_visits": 2
+    }
+  },
+  {
+    "state": "Wisconsin",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 24,
+      "counseling_visits": 2
+    }
+  },
+  {
+    "state": "Alabama",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 48,
+      "counseling_waived_condition": "In cases of ectopic pregnancy or severe fetal impairment.",
+      "counseling_visits": 1
+    }
+  },
+  {
+    "state": "Missouri",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 72,
+      "counseling_visits": 2
+    }
+  },
+  {
+    "state": "Idaho",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 24,
+      "counseling_visits": 1
+    }
+  },
+  {
+    "state": "Virginia",
+    "waitingPeriodRegulations": { "Last Updated": "2020-07-06T15:57:47.000Z" }
+  },
+  {
+    "state": "Pennsylvania",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 24,
+      "counseling_visits": 1
+    }
+  },
+  {
+    "state": "Florida",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 24,
+      "counseling_visits": 2,
+      "Last Updated": "2022-04-04T14:57:11.000Z"
+    }
+  },
+  {
+    "state": "South Carolina",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 24,
+      "counseling_visits": 1
+    }
+  },
+  {
+    "state": "Georgia",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 24,
+      "counseling_visits": 1
+    }
+  },
+  {
+    "state": "Minnesota",
+    "waitingPeriodRegulations": { "Last Updated": "2022-07-11T21:19:45.000Z" }
+  },
+  {
+    "state": "Indiana",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 18,
+      "counseling_visits": 2
+    }
+  },
+  {
+    "state": "Utah",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 72,
+      "counseling_waived_condition": "If the pregnancy is the result of rape or incest or the patient is younger than 15.",
+      "counseling_visits": 2
+    }
+  },
+  {
+    "state": "North Carolina",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 72,
+      "counseling_visits": 1
+    }
+  },
+  {
+    "state": "Arkansas",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 72,
+      "counseling_visits": 2,
+      "Last Updated": "2019-11-13T12:13:26.000Z"
+    }
+  },
+  {
+    "state": "North Dakota",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 24,
+      "counseling_visits": 1
+    }
+  },
+  {
+    "state": "Iowa",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 24,
+      "counseling_visits": 1,
+      "Last Updated": "2022-06-18T17:06:11.000Z"
+    }
+  },
+  {
+    "state": "Michigan",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 24,
+      "counseling_visits": 1
+    }
+  },
+  {
+    "state": "Nebraska",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 24,
+      "counseling_visits": 1
+    }
+  },
+  {
+    "state": "South Dakota",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 72,
+      "waiting_period_notes": "Weekends and holidays do not count towards the 72-hour waiting period.",
+      "counseling_visits": 2
+    }
+  },
+  {
+    "state": "Louisiana",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 72,
+      "counseling_visits": 2,
+      "Last Updated": "2022-06-16T13:15:50.000Z"
+    }
+  },
+  {
+    "state": "Texas",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 24,
+      "counseling_waived_condition": "The ultrasound must take place at least 24 hours before the abortion unless the patient lives more than 100 miles from an abortion provider or if the pregnancy is the result of rape or incest or if the fetus has a lethal anomaly.",
+      "counseling_visits": 2
+    }
+  },
+  {
+    "state": "Alaska",
+    "waitingPeriodRegulations": {
+      "counseling_visits": 1,
+      "Last Updated": "2022-02-15T21:04:41.000Z"
+    }
+  },
+  {
+    "state": "West Virginia",
+    "waitingPeriodRegulations": {
+      "waiting_period_hours": 24,
+      "counseling_visits": 1
+    }
+  },
+  {
+    "state": "Alaska",
+    "waitingPeriodRegulations": {}
+  }
+]
