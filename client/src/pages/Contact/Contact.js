@@ -42,7 +42,7 @@ const Contact = () => {
           </form>
 
           {/* Right Side */}
-          <img src={image} alt="" className="w-[430px] hidden lg:block" />
+          <img src={image} alt="floral picture" className="w-[430px] hidden lg:block" />
         </div>
       </div>
     </div>

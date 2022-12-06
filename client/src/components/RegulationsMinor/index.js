@@ -9,8 +9,6 @@ export default function RegulationsMinor(props) {
   if (error) return `Error! ${error.message}`;
   
   const minorRegulations =  data.minorRegs.minorRegulations[0] 
-  console.log("JKBminorRegulations=")
-  console.log(minorRegulations)
 
   // Check the data in the "banned_after_weeks_since_LMP field"
   function parentsRequired() {
@@ -31,7 +29,7 @@ export default function RegulationsMinor(props) {
 
   // Check the text data in the "banned_after_weeks_since_LMP field"
   function belowAge() {
-    if (minorRegulations.below_age === undefined)
+    if (!minorRegulations.below_age)
       return <li>There are no restrictions on minor's abortions currently being enforced in {props.stateUS}.</li>
     else
       return <li>Abortions restrictions for minors end at age {minorRegulations.below_age}.</li>

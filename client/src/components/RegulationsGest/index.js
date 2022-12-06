@@ -8,20 +8,7 @@ export default function RegulationsGest(props) {
   if (loading) return 'Loading...';
   if (error) return `Error! ${error.message}`;
 
-    //const gestationalRegulations = ((status === "success") ? data.gestationRegs.gestationalRegulations[0] : "")
-  // if (data === null) {
-  //   return <li>There is no data on this category for {props.stateUS}</li>
-  //   }
-  //const gestationalRegulations = ((status === "success") ? data.gestationRegs.gestationalRegulations[0] : "")
   const gestationalRegulations =  data.gestationRegs.gestationalRegulations[0] 
-  console.log("JKBgestationalRegulations=")
-  console.log(gestationalRegulations)
-
-// if (data) {
-//   const gestationalRegulations = data.gestationRegs.gestationalRegulations[0]}
-//   if (!gestationalRegulations) {
-//     return <li>There is no data on this category for {props.stateUS}</li>
-//   }
 
   // Check the data in the "banned_after_weeks_since_LMP field"
   function allowAbortion() {
