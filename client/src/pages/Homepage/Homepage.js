@@ -9,11 +9,11 @@ export default function Homepage() {
     setState(e.target.value);
   }
   return (
-    <section className="md:pt-[60px]">
+    <section>
 
       {/* Logo and optional divider line */}
       <div className="hidden md:block">
-        <div className="pb-10 pt-20 max-w-6xl mx-auto">
+        <div className="pb-10 pt-16 max-w-6xl mx-auto">
           <img
             className="mx-auto"
             src={mainLogo}

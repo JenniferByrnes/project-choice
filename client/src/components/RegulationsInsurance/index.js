@@ -9,8 +9,6 @@ export default function RegulationsInsurance(props) {
   if (error) return `Error! ${error.message}`;
 
   const insuranceRegulations = data.insuranceRegs.insuranceRegulations[0]
-  console.log("JKBinsuranceRegulations=")
-  console.log(insuranceRegulations)
 
   // Check the data in the "banned_after_weeks_since_LMP field"
   function medicaidDecision() {
