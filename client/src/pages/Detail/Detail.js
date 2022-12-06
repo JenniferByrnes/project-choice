@@ -95,7 +95,7 @@ export default function Detail() {
           // container to place image and text 
           <div className="relative flex flex-col w-full mx-auto m-6 items-center shadow-2xl rounded-2xl md:flex-row md:m-0 bg-gradient-to-r from-indigo-100 to-white">
             {/* Left Side */}
-            <div className="img-container md:pt-2 drop-shadow-2xl w-80 md:max-w-prose origin-bottom ...">
+            <div className="img-container md:pt-2 drop-shadow-2xl w-80 md:w-fit md:max-w-prose origin-bottom ...">
               <img className="drop-shadow-2xl"
                 src={`/images/${currentProduct.image}`}
                 alt={currentProduct.name}

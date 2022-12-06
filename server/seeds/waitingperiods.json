@@ -214,5 +214,89 @@
   {
     "state": "Alaska",
     "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "California",
+    "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "Colorado",
+    "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "Connecticut",
+    "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "Delaware",
+    "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "District of Columbia",
+    "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "Hawaii",
+    "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "Illinois",
+    "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "Maine",
+    "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "Maryland",
+    "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "Massachusetts",
+    "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "Montana",
+    "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "Nevada",
+    "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "New Hampshire",
+    "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "New Jersey",
+    "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "New Mexico",
+    "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "New York",
+    "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "Oregon",
+    "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "Rhode Island",
+    "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "Vermont",
+    "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "Washington",
+    "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "Wyoming",
+    "waitingPeriodRegulations": {}
   }
 ]
