@@ -1,9 +1,9 @@
-import image from '../../assets/images/PC-contact-us.png'
+import imageFloral from '../../assets/images/PC-contact-us.png'
 
 const Contact = () => {
   return (
     // Contact page container
-    <div className='container w-full mx-auto text-stone-800 flex justify-center items-center md:p-4 '>
+    <section className='container w-full mx-auto text-stone-800 flex justify-center items-center md:p-4 '>
       {/* container to place form and text */}
       <div className='flex flex-col justify-center items-center px-6 pt-4 py-4 md:py-8 sm:pt-[30px] mx-auto '>
         {/* before the form header */}
@@ -42,10 +42,10 @@ const Contact = () => {
           </form>
 
           {/* Right Side */}
-          <img src={image} alt="floral picture" className="w-[430px] hidden lg:block" />
+          <img src={imageFloral} alt="floral" className="w-[430px] hidden lg:block" />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
