@@ -1,6 +1,6 @@
 # Project Choice
 
-Project Choice is a single page React Application that provides current information on Abortion Access by state.  There is a contact form to get more information and an online shop with branded products available for purchase.  All proceeds go the Planned Parenthood.
+Project Choice is a multi-page React Application that provides current information on Abortion Access by state and includes a (capable, but non-functioning) store with branded merchandise for purchase.  There is a contact form to send in suggestions to the developers.  All proceeds go the Planned Parenthood.
 
 ![License](https://img.shields.io/badge/License-MIT-lightblue.svg)
 
@@ -19,7 +19,7 @@ Project Choice is a single page React Application that provides current informat
 
 ## Description:
 
-With 3 non-personally-identifiable pieces of information (that we don’t collect or store), we’re able to give people seeking abortions the information most relevant to their individual circumstances. Our goal is to make it as easy as possible for people to find the information and resources that apply to them, without having to sift through a lot of noise or, worse, misinformation and stigma from anti-abortion organizations.
+The user can get information about abortion laws (gestational, minors, insurance, and waiting periods) for any US state.  Our goal is to make it as easy as possible for people to find the information and resources that apply to them, without having to sift through a lot of noise or, worse, misinformation and stigma from anti-abortion organizations.
 
 A fully functional version is available [here](https://project-choice.herokuapp.com/)
 
@@ -45,6 +45,7 @@ A fully functional version is available [here](https://project-choice.herokuapp.
    ```
 3. Initiate application in the root of the application
    ```sh
+   npm run seed
    npm run develop
    ```
 
@@ -85,6 +86,3 @@ Check out the creators's Github links here:
 
 [Github Amanda Phillips](https://github.com/babaphillips)\
 [Github Jennifer Byrnes](https://github.com/JenniferByrnes)\
-[Github James Fraser](https://github.com/James-Fraser1)\
-[Github Cortland Finch](https://github.com/cortlandfinch)\
-[Github Christian Rockwood](https://github.com/rockwoodc)
