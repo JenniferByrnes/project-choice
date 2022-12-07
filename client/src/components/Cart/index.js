@@ -53,6 +53,7 @@ const Cart = () => {
 
   // Create array of items and send to Checkout
   function submitCheckout() {
+    console.log("working")
     const productIds = [];
 
     state.cart.forEach((item) => {
