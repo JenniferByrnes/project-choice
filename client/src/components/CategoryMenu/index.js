@@ -7,7 +7,6 @@ import {
 } from '../../utils/actions';
 import { QUERY_CATEGORIES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
-import { Link } from 'react-router-dom';
 
 // Display the category menu
 
@@ -66,16 +65,7 @@ export default function CategoryMenu() {
         >
           {item.name}
         </button>
-
       ))}
-      <ul className="hidden md:flex items-center justify-around">
-        <li className="hover:text-pcCoral hover:border-b hover:border-pcCoral">
-          <Link to="/login">Login/</Link>
-        </li>
-        <li className="hover:text-pcCoral hover:border-b hover:border-pcCoral">
-          <Link to="/signup">Sign Up</Link>
-        </li>
-      </ul>
     </div>
   );
 }

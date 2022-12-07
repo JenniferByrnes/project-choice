@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import Auth from '../../utils/auth';
+import { Link } from 'react-router-dom';
 import { ADD_USER } from '../../utils/mutations';
 import image from '../../assets/images/PC-signup.png'
 
@@ -52,16 +53,17 @@ export default function Signup() {
             {/* Email input */}
             <div>
               <label htmlFor="email" className="block mb-2 text-sm font-medium ">Your email</label>
-              <input type="email" name="email" id="email" className="form-field focus: outline-pcGreen" placeholder="name@email.com" onChange={handleChange} />
+              <input type="email" name="email" id="email" className="form-field  mb-4 focus: outline-pcGreen" placeholder="name@email.com" onChange={handleChange} />
             </div>
             {/* password input */}
             <div>
               <label for="password" className="block mb-2 text-sm font-medium ">Password</label>
-              <input type="password" name="password" placeholder="••••••••" className="form-field focus: outline-pcGreen" onChange={handleChange} />
+              <input type="password" name="password" placeholder="••••••••" className="form-field  mb-4 focus: outline-pcGreen" onChange={handleChange} />
             </div>
-            <div className="flex items-center md:items-start">
+            <div className="flex items-center justify-evenly space-x-2">
               {/* submit button */}
               <button type="submit" className="form-button">Submit</button>
+              <button type="submit" className="form-button"><Link to="/login">Login?</Link></button>
             </div>
           </form>
         </div>

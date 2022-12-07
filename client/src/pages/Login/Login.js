@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../../utils/mutations';
+import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth';
 import image from '../../assets/images/PC-login.png'
 
@@ -46,19 +47,20 @@ function Login(props) {
             <form className="space-y-4 md:space-y-6 " onSubmit={handleFormSubmit}>
               <div>
                 <label for="email" className="block mb-2 text-sm font-medium ">Your email</label>
-                <input type="email" name="email" id="email" className="form-field focus: outline-pcGreen" placeholder="name@email.com" onChange={handleChange} />
+                <input type="email" name="email" id="email" className="form-field  mb-4 focus: outline-pcGreen" placeholder="name@email.com" onChange={handleChange} />
               </div>
               <div>
                 <label for="password" className="block mb-2 text-sm font-medium ">Password</label>
-                <input type="password" name="password" placeholder="••••••••" className="form-field focus: outline-pcGreen" onChange={handleChange} />
+                <input type="password" name="password" placeholder="••••••••" className="form-field  mb-4 focus: outline-pcGreen" onChange={handleChange} />
               </div>
               {error ? (
                 <div>
                   <p className="error-text">The provided credentials are incorrect</p>
                 </div>
               ) : null}
-              <div className="flex items-center md:items-start">
-                <button type="submit" className="form-button">Login</button>
+              <div className="flex items-center justify-evenly space-x-2">
+                <button type="submit" className="form-button">Submit</button>
+                <button type="submit" className="form-button"><Link to="/signup">Sign Up?</Link></button>
               </div>
             </form>
           </div>
