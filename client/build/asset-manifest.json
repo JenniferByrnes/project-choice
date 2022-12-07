@@ -18,8 +18,5 @@
     "main.70ea3bc4.css.map": "/static/css/main.70ea3bc4.css.map",
     "main.a29856da.js.map": "/static/js/main.a29856da.js.map"
   },
-  "entrypoints": [
-    "static/css/main.70ea3bc4.css",
-    "static/js/main.a29856da.js"
-  ]
+  "entrypoints": ["static/css/main.70ea3bc4.css", "static/js/main.a29856da.js"]
 }
