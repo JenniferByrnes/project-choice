@@ -298,5 +298,9 @@
   {
     "state": "Wyoming",
     "waitingPeriodRegulations": {}
+  },
+  {
+    "state": "Puerto Rico",
+    "waitingPeriodRegulations": {}
   }
 ]
