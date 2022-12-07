@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
+import Auth from '../../utils/auth';
 import Logo from "../../assets/images/pc-horizontal-logo.png";
 import './nav.css';
 
@@ -25,6 +26,22 @@ const Navbar = () => {
           <li className="hover:text-pcCoral hover:border-b hover:border-pcCoral">
             <Link to="/shop">Shop</Link>
           </li>
+          {!Auth.loggedIn() ? (
+        <ul className="hidden md:flex items-center justify-around">
+          <li className="hover:text-pcCoral hover:border-b hover:border-pcCoral">
+            <Link to="/login">Login/</Link>
+          </li>
+          <li className="hover:text-pcCoral hover:border-b hover:border-pcCoral">
+            <Link to="/signup">Sign Up</Link>
+          </li>
+        </ul>
+      ) : (
+        <ul className="hidden md:flex items-center justify-around">
+          <li className="hover:text-pcCoral hover:border-b hover:border-pcCoral">
+            <Link to="/" onClick={() => Auth.logout()}>Logout</Link>
+          </li>
+        </ul>
+      )}
         </ul>
 
         {/* Mobile Hamburger Header */}

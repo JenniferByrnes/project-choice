@@ -5,7 +5,7 @@ const Contact = () => {
     // Contact page container
     <section className="container w-full mx-auto text-stone-800 flex justify-center items-center md:p-4 ">
       {/* container to place form and text */}
-      <div className="flex flex-col justify-center items-center px-6 pt-4 py-4 md:py-8 sm:pt-[30px] mx-auto ">
+      <div className="flex flex-col justify-center items-center px-6 pt-4 py-4 sm:pt-[30px] mx-auto ">
         {/* before the form header */}
         <div className="text-center">
           <h2 className="text-4xl inline border-b-4 border-pcCoral">Contact</h2>
@@ -56,7 +56,7 @@ const Contact = () => {
                 />
               </div>
               {/* button */}
-              <div className="flex items-center md:items-start">
+              <div className="flex items-center justify-evenly">
                 <button className="form-button">Submit</button>
               </div>
             </div>
