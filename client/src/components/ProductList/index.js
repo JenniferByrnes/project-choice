@@ -47,9 +47,9 @@ function ProductList() {
   return (
     <div className="justify-center p-4">
 
-      <div className="flex">
+      <div className="flex  mx-auto">
         {state.products.length ? (
-          <div className="flex flex-wrap justify-evenly">
+          <div className="flex flex-wrap ">
             {filterProducts().map((product) => (
               <ProductItem
                 key={product._id}
@@ -58,6 +58,7 @@ function ProductList() {
                 name={product.name}
                 price={product.price}
                 quantity={product.quantity}
+                className="flex flex-wrap"
               />
             ))}
           </div>
