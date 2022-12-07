@@ -8,7 +8,7 @@ export default function About() {
     >
       <div className="md:mt-12 p-6 flex flex-col justify-center w-full">
         <div className="pb-6 md:pb-12 text-center">
-          <h2 className="text-4xl inline border-b-4 border-pcCoral py-3">
+          <h2 className="text-4xl inline border-b-4 border-pcCoral">
             About Project Choice
           </h2>
         </div>
