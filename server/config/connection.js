@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 // process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/projectchoice",
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/project-choicess",
-    // "mongodb+srv://projectchoice:choiceproject@cluster0.zeqcbl6.mongodb.net/?retryWrites=true&w=majority",
+// To run seeds - connect to MONGODB_URI - mongodb+srv://projectchoice: .... with no local option.
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
