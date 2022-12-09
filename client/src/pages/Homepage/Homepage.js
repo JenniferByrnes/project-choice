@@ -30,7 +30,27 @@ export default function Homepage() {
       </div>
 
       {/* Container for main content */}
-      <div className="container flex flex-col mx-auto p-5 lg:flex-row lg:mb-0">
+      <div className="container flex flex-col-reverse mx-auto p-5 lg:flex-row lg:mb-0">
+      <div className="overflow-hidden border-8 border-double border-pcTan sm:rounded-md justify-center items-center">
+          <div className="bg-white px-4 py-5 sm:p-6 text-center lg:text-left">
+            <div className="font-extrabold leading-10 text-center lg:text-left">
+              ABORTION IS HEALTH CARE!
+            </div>
+            At Project Choice we believe in body autonomy and the woman's
+            absolute right to chose. The last thing that should stand in the way
+            is lack of information, and that is the reason for this project.
+            <br />
+            <br />
+            Simply select your state to see policies in your area to include
+            legality, gestational limits, waiting periods, and special rules for
+            minors. We have a shop with branded merchandise whose proceeds
+            benefit Planned Parenthood. At the footer are links to organizations
+            that can help.
+            <br />
+            <br />
+            If you have any suggestions for us, please use our Contact Form!
+          </div>
+        </div>
         {/* Select your state */}
         <div className="overflow-hidden border-8 border-pcTan border-double sm:rounded-md justify-center items-center ">
           <div className="bg-white px-4 pt-5 sm:p-2 justify-center items-center">
@@ -97,33 +117,15 @@ export default function Homepage() {
             </select>
             <div className="flex flex-col items-center">
               <a href={`/policies/${state}`}>
-                <button className="mt-3 mb-3 md:mt-10 md:mb-10 py-1 px-5 shadow-md shadow-stone-300 text-black text-lg sm-rounded border-8 border-double border-pcTan hover:scale-110 hover:shadow-lg hover:shadow-stone-500">
+                <button className="mt-3 mb-3 md:mt-10 md:mb-10 py-1 px-5 shadow-md shadow-stone-300 text-lg sm-rounded border-8 border-double border-pcTan hover:scale-110 hover:shadow-lg hover:shadow-stone-500">
                   Policies
                 </button>
               </a>
             </div>
+            <p className="text-center text-xs">No identifying data is saved/stored from this selection!</p>
           </div>
         </div>
-        <div className="overflow-hidden border-8 border-double border-pcTan sm:rounded-md justify-center items-center">
-          <div className="bg-white px-4 py-5 sm:p-6 text-center lg:text-left">
-            <div className="font-extrabold leading-10 text-center lg:text-left">
-              ABORTION IS HEALTH CARE!
-            </div>
-            At Project Choice we believe in body autonomy and the woman's
-            absolute right to chose. The last thing that should stand in the way
-            is lack of information, and that is the reason for this project.
-            <br />
-            <br />
-            Simply select your state to see policies in your area to include
-            legality, gestational limits, waiting periods, and special rules for
-            minors. We have a shop with branded merchandise whose proceeds
-            benefit Planned Parenthood. At the footer are links to organizations
-            that can help.
-            <br />
-            <br />
-            If you have any suggestions for us, please use our Contact Form!
-          </div>
-        </div>
+        
       </div>
       {/* start form code */}
     </section>
